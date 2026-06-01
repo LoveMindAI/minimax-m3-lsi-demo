@@ -1,0 +1,49 @@
+stage	generator	variant	scorer	metric_group	metric	n	r	mae
+profile	minimax_m3	psych	self	hexaco	hexaco_mean_abs_r	50	0.8645406107581343	0.3383333333333332
+profile	minimax_m3	psych	self	beyond_hexaco	beyond_hexaco_mean_abs_r	50	0.5859308015526288	0.4876333333333334
+profile	minimax_m3	psych	self	svo	svo_mean_abs_r	50	0.6804907827972069	7.86892472900214
+profile	minimax_m3	psych	self	overall	continuous16_mean_abs_r	50	0.6898260272277824	
+profile	minimax_m3	psych	gemini3flash	hexaco	hexaco_mean_abs_r	50	0.8800352206961645	0.5326666666666667
+profile	minimax_m3	psych	gemini3flash	beyond_hexaco	beyond_hexaco_mean_abs_r	50	0.6871374091778643	0.5581499999999999
+profile	minimax_m3	psych	gemini3flash	svo	svo_mean_abs_r	50	0.8896814439025736	5.244527170529035
+profile	minimax_m3	psych	gemini3flash	overall	continuous16_mean_abs_r	50	0.7671333446975414	
+profile	minimax_m3	interwoven	self	hexaco	hexaco_mean_abs_r	50	0.8782902786190506	0.3283333333333333
+profile	minimax_m3	interwoven	self	beyond_hexaco	beyond_hexaco_mean_abs_r	50	0.6146188511462612	0.4779833333333333
+profile	minimax_m3	interwoven	self	svo	svo_mean_abs_r	50	0.2987426489136652	9.729012986436041
+profile	minimax_m3	interwoven	self	overall	continuous16_mean_abs_r	50	0.6890984018876813	
+profile	minimax_m3	interwoven	gemini3flash	hexaco	hexaco_mean_abs_r	50	0.8838477254461957	0.529
+profile	minimax_m3	interwoven	gemini3flash	beyond_hexaco	beyond_hexaco_mean_abs_r	50	0.7098392251473057	0.5525833333333334
+profile	minimax_m3	interwoven	gemini3flash	svo	svo_mean_abs_r	50	0.8903977818709027	5.449712469080408
+profile	minimax_m3	interwoven	gemini3flash	overall	continuous16_mean_abs_r	50	0.7818750815306552	
+lsi	minimax_m3	psych	self	hexaco	hexaco_mean_abs_r	50	0.6107847130717979	0.591
+lsi	minimax_m3	psych	self	beyond_hexaco	beyond_hexaco_mean_abs_r	50	0.34925999011203074	0.6661166666666666
+lsi	minimax_m3	psych	self	svo	svo_mean_abs_r	50	0.32421111428422966	9.19670978643806
+lsi	minimax_m3	psych	self	overall	continuous16_mean_abs_r	50	0.44008937022560746	
+lsi	minimax_m3	psych	gemini3flash	hexaco	hexaco_mean_abs_r	50	0.632103119731333	0.7090000000000001
+lsi	minimax_m3	psych	gemini3flash	beyond_hexaco	beyond_hexaco_mean_abs_r	50	0.3666831446797188	0.6626666666666667
+lsi	minimax_m3	psych	gemini3flash	svo	svo_mean_abs_r	50	0.35836025876489797	11.05417868910028
+lsi	minimax_m3	psych	gemini3flash	overall	continuous16_mean_abs_r	50	0.45987120140882837	
+lsi	minimax_m3	interwoven	self	hexaco	hexaco_mean_abs_r	50	0.5748466929447598	0.6063333333333333
+lsi	minimax_m3	interwoven	self	beyond_hexaco	beyond_hexaco_mean_abs_r	50	0.3699570958343508	0.6897
+lsi	minimax_m3	interwoven	self	svo	svo_mean_abs_r	50	0.058073853767401706	11.594602491129228
+lsi	minimax_m3	interwoven	self	overall	continuous16_mean_abs_r	50	0.42392499822232166	
+lsi	minimax_m3	interwoven	gemini3flash	hexaco	hexaco_mean_abs_r	50	0.6363554959155675	0.67
+lsi	minimax_m3	interwoven	gemini3flash	beyond_hexaco	beyond_hexaco_mean_abs_r	50	0.4437656450614112	0.6626166666666666
+lsi	minimax_m3	interwoven	gemini3flash	svo	svo_mean_abs_r	50	0.3730628301807641	11.70111594084629
+lsi	minimax_m3	interwoven	gemini3flash	overall	continuous16_mean_abs_r	50	0.5075795444875459	
+lsi_baseline	gemma_profile_gemini_lsi	psych	self	hexaco	hexaco_mean_abs_r	50	0.7558606676213194	0.6003333333333334
+lsi_baseline	gemma_profile_gemini_lsi	psych	self	beyond_hexaco	beyond_hexaco_mean_abs_r	50	0.6049796889797736	0.66015
+lsi_baseline	gemma_profile_gemini_lsi	psych	self	svo	svo_mean_abs_r	50	0.29878493562408376	11.301868369911322
+lsi_baseline	gemma_profile_gemini_lsi	psych	self	overall	continuous16_mean_abs_r	50	0.640220343008808	
+lsi_baseline	gemma_profile_gemini_lsi	interwoven	self	hexaco	hexaco_mean_abs_r	50	0.7440335567603489	0.5913333333333334
+lsi_baseline	gemma_profile_gemini_lsi	interwoven	self	beyond_hexaco	beyond_hexaco_mean_abs_r	50	0.613142845817314	0.61095
+lsi_baseline	gemma_profile_gemini_lsi	interwoven	self	svo	svo_mean_abs_r	50	0.531537750939503	10.115281258269015
+lsi_baseline	gemma_profile_gemini_lsi	interwoven	self	overall	continuous16_mean_abs_r	50	0.6545392676279258	
+lsi_baseline	gemma_profile_gemini_lsi	psych	gemini3flash	hexaco	hexaco_mean_abs_r	50	0.7659572345998424	0.7136666666666667
+lsi_baseline	gemma_profile_gemini_lsi	psych	gemini3flash	beyond_hexaco	beyond_hexaco_mean_abs_r	50	0.5909438101048441	0.7157166666666666
+lsi_baseline	gemma_profile_gemini_lsi	psych	gemini3flash	svo	svo_mean_abs_r	50	0.6664158519415216	8.624884568045491
+lsi_baseline	gemma_profile_gemini_lsi	psych	gemini3flash	overall	continuous16_mean_abs_r	50	0.6571527859170011	
+lsi_baseline	gemma_profile_gemini_lsi	interwoven	gemini3flash	hexaco	hexaco_mean_abs_r	50	0.7483285517815111	0.6760000000000002
+lsi_baseline	gemma_profile_gemini_lsi	interwoven	gemini3flash	beyond_hexaco	beyond_hexaco_mean_abs_r	50	0.6276603653976517	0.6770333333333334
+lsi_baseline	gemma_profile_gemini_lsi	interwoven	gemini3flash	svo	svo_mean_abs_r	50	0.4834499733609517	10.053416793516677
+lsi_baseline	gemma_profile_gemini_lsi	interwoven	gemini3flash	overall	continuous16_mean_abs_r	50	0.6617661728250903	

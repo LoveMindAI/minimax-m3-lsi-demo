@@ -1,0 +1,13 @@
+character	object	all_dimensions_pearson_r_to_name_fact_target	all_dimensions_mean_absolute_error	hexaco_pearson_r_to_name_fact_target	hexaco_mean_absolute_error	beyond_hexaco_pearson_r_to_name_fact_target	beyond_hexaco_mean_absolute_error
+Cillian Frost	opus_4_6_interwoven_bio	0.812	0.652	0.912	0.645	0.227	0.660
+Cillian Frost	gemma_4_31b_psych_only	0.834	0.661	0.873	0.622	0.924	0.707
+Cillian Frost	gemma_4_31b_interwoven_bio	0.865	0.576	0.890	0.550	0.914	0.607
+Cillian Frost	opus_4_6_psych_only	0.774	0.797	0.871	0.833	0.415	0.753
+Haruki Minamoto	opus_4_6_psych_only	0.896	0.500	0.964	0.472	0.934	0.533
+Haruki Minamoto	opus_4_6_interwoven_bio	0.921	0.545	0.946	0.561	0.940	0.526
+Haruki Minamoto	gemma_4_31b_psych_only	0.910	0.624	0.915	0.594	0.936	0.660
+Haruki Minamoto	gemma_4_31b_interwoven_bio	0.896	0.588	0.902	0.583	0.908	0.593
+Isolde Marrow-Lark	gemma_4_31b_psych_only	0.898	0.585	0.951	0.578	0.838	0.593
+Isolde Marrow-Lark	opus_4_6_psych_only	0.896	0.518	0.939	0.561	0.784	0.467
+Isolde Marrow-Lark	gemma_4_31b_interwoven_bio	0.876	0.624	0.970	0.606	0.891	0.646
+Isolde Marrow-Lark	opus_4_6_interwoven_bio	0.934	0.303	0.979	0.339	0.852	0.260

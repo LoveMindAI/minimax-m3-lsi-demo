@@ -1,0 +1,16 @@
+character	object	all_dimensions_pearson_r_to_name_fact_target	all_dimensions_mean_absolute_error	hexaco_pearson_r_to_name_fact_target	hexaco_mean_absolute_error	beyond_hexaco_pearson_r_to_name_fact_target	beyond_hexaco_mean_absolute_error
+Cillian Frost	deterministic_scorecard	0.999	0.019	1.000	0.023	0.997	0.014
+Cillian Frost	gemma_4_31b_psych_only	0.837	0.543	0.854	0.545	0.946	0.540
+Cillian Frost	gemma_4_31b_interwoven_bio	0.766	0.649	0.756	0.711	0.961	0.573
+Cillian Frost	opus_4_6_psych_only	0.845	0.539	0.920	0.556	0.332	0.520
+Cillian Frost	opus_4_6_interwoven_bio	0.896	0.361	0.940	0.389	0.413	0.327
+Haruki Minamoto	deterministic_scorecard	1.000	0.007	1.000	0.009	1.000	0.005
+Haruki Minamoto	gemma_4_31b_psych_only	0.919	0.651	0.915	0.622	0.947	0.687
+Haruki Minamoto	opus_4_6_interwoven_bio	0.919	0.464	0.932	0.472	0.948	0.453
+Haruki Minamoto	opus_4_6_psych_only	0.937	0.476	0.978	0.422	0.914	0.540
+Haruki Minamoto	gemma_4_31b_interwoven_bio	0.911	0.609	0.918	0.567	0.942	0.660
+Isolde Marrow-Lark	deterministic_scorecard	1.000	0.019	1.000	0.015	0.999	0.023
+Isolde Marrow-Lark	gemma_4_31b_psych_only	0.796	0.663	0.945	0.661	0.881	0.666
+Isolde Marrow-Lark	gemma_4_31b_interwoven_bio	0.673	0.709	0.974	0.666	0.880	0.760
+Isolde Marrow-Lark	opus_4_6_psych_only	0.924	0.439	0.946	0.477	0.873	0.393
+Isolde Marrow-Lark	opus_4_6_interwoven_bio	0.957	0.291	0.980	0.344	0.924	0.227

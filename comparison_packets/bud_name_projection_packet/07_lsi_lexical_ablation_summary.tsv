@@ -1,0 +1,13 @@
+character	object	profile_content_words	profile_words_in_original_lsi	profile_words_in_ablated_lsi	profile_word_reduction	profile_word_reduction_pct	original_word_count	ablated_word_count	original_all_dimensions_r	ablated_all_dimensions_r	delta_all_dimensions_r	original_hexaco_r	ablated_hexaco_r	delta_hexaco_r	original_beyond_hexaco_r	ablated_beyond_hexaco_r	delta_beyond_hexaco_r
+Haruki Minamoto	opus_4_6_interwoven_bio	300	130	44	86	0.662	2014	1916	0.872	0.875	+0.003	0.872	0.878	+0.006	0.980	0.986	+0.006
+Bud Heffner	opus_4_6_interwoven_bio	300	141	44	97	0.688	2197	2025	0.954	0.942	-0.012	0.960	0.950	-0.010	0.942	0.954	+0.012
+Cillian Frost	opus_4_6_interwoven_bio	300	162	45	117	0.722	1957	1909	0.872	0.892	+0.020	0.962	0.971	+0.009	0.512	0.513	+0.001
+Bud Heffner	gemma_4_31b_psych_only	127	80	15	65	0.812	2207	1995	0.916	0.923	+0.007	0.949	0.946	-0.003	0.897	0.922	+0.025
+Cillian Frost	gemma_4_31b_interwoven_bio	169	121	25	96	0.793	2130	2126	0.907	0.925	+0.018	0.939	0.953	+0.014	0.889	0.944	+0.055
+Haruki Minamoto	gemma_4_31b_psych_only	158	122	25	97	0.795	2115	2107	0.916	0.931	+0.015	0.904	0.932	+0.028	0.969	0.968	-0.001
+Haruki Minamoto	opus_4_6_psych_only	300	147	42	105	0.714	1990	1953	0.941	0.921	-0.020	0.907	0.911	+0.004	0.983	0.947	-0.036
+Cillian Frost	opus_4_6_psych_only	300	99	39	60	0.606	2062	1911	0.914	0.907	-0.007	0.964	0.954	-0.010	0.584	0.634	+0.050
+Bud Heffner	gemma_4_31b_interwoven_bio	159	90	12	78	0.867	2158	2022	0.924	0.919	-0.005	0.953	0.949	-0.004	0.792	0.817	+0.025
+Haruki Minamoto	gemma_4_31b_interwoven_bio	170	123	16	107	0.870	2018	1960	0.923	0.905	-0.018	0.855	0.830	-0.025	0.980	0.982	+0.002
+Bud Heffner	opus_4_6_psych_only	300	106	37	69	0.651	2164	1944	0.882	0.883	+0.001	0.941	0.947	+0.006	0.580	0.471	-0.109
+Cillian Frost	gemma_4_31b_psych_only	138	105	14	91	0.867	2209	2224	0.814	0.846	+0.032	0.875	0.883	+0.008	0.777	0.851	+0.074

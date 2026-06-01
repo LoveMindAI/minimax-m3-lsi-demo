@@ -1,0 +1,557 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MiniMax M3 Life Story Interview Demo</title>
+  <meta name="description" content="A public-safe MiniMax M3 Life Story Interview demo with synthetic side-by-side profiles, LSI transcripts, and aggregate benchmark tables.">
+  <style>
+    :root {
+      --ink: #171717;
+      --muted: #5d6673;
+      --paper: #fbfaf7;
+      --panel: #ffffff;
+      --line: #ded8ce;
+      --accent: #2f7d6d;
+      --accent-2: #ad6a28;
+      --soft: #edf5f2;
+      --soft-2: #fff1df;
+      --shadow: 0 18px 45px rgba(31, 34, 38, 0.11);
+      --radius: 8px;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background:
+        linear-gradient(180deg, rgba(251, 250, 247, 0.96), rgba(251, 250, 247, 1)),
+        repeating-linear-gradient(90deg, rgba(47, 125, 109, 0.04) 0 1px, transparent 1px 74px);
+      line-height: 1.55;
+    }
+
+    a {
+      color: #116856;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+    }
+
+    .wrap {
+      width: min(1160px, calc(100vw - 32px));
+      margin: 0 auto;
+    }
+
+    header {
+      min-height: 82vh;
+      display: grid;
+      align-items: center;
+      padding: 44px 0 32px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.05fr) minmax(340px, 0.95fr);
+      gap: 48px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 7px 10px;
+      border: 1px solid rgba(47, 125, 109, 0.32);
+      background: var(--soft);
+      color: #215a50;
+      border-radius: 999px;
+      font-size: 0.78rem;
+      font-weight: 750;
+      text-transform: uppercase;
+      letter-spacing: 0;
+    }
+
+    h1 {
+      margin: 20px 0 18px;
+      font-size: clamp(3rem, 7vw, 6.4rem);
+      line-height: 0.92;
+      letter-spacing: 0;
+      max-width: 850px;
+    }
+
+    .lede {
+      max-width: 760px;
+      font-size: clamp(1.12rem, 2vw, 1.42rem);
+      color: #2e343a;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 30px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 44px;
+      padding: 0 16px;
+      border-radius: 8px;
+      border: 1px solid var(--line);
+      background: var(--panel);
+      color: var(--ink);
+      font-weight: 720;
+      text-decoration: none;
+      box-shadow: 0 6px 18px rgba(31, 34, 38, 0.06);
+    }
+
+    .button.primary {
+      background: var(--accent);
+      color: white;
+      border-color: var(--accent);
+    }
+
+    .hero-note {
+      margin-top: 22px;
+      max-width: 760px;
+      color: var(--muted);
+      font-size: 0.98rem;
+    }
+
+    .quote-panel {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 26px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .quote-panel:before {
+      content: "";
+      position: absolute;
+      inset: 0 auto 0 0;
+      width: 6px;
+      background: linear-gradient(180deg, var(--accent), var(--accent-2));
+    }
+
+    .quote-panel .label {
+      color: var(--muted);
+      font-size: 0.82rem;
+      font-weight: 760;
+      text-transform: uppercase;
+      letter-spacing: 0;
+      margin-bottom: 14px;
+    }
+
+    blockquote {
+      margin: 0;
+      font-size: 1.08rem;
+      line-height: 1.62;
+    }
+
+    blockquote p {
+      margin: 0;
+    }
+
+    section {
+      padding: 64px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .section-head {
+      display: flex;
+      justify-content: space-between;
+      gap: 22px;
+      align-items: end;
+      margin-bottom: 28px;
+    }
+
+    h2 {
+      margin: 0;
+      font-size: clamp(2rem, 4vw, 3.4rem);
+      line-height: 1.02;
+      letter-spacing: 0;
+    }
+
+    .section-kicker {
+      max-width: 560px;
+      margin: 0;
+      color: var(--muted);
+      font-size: 1.03rem;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .card {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 20px;
+      min-height: 100%;
+    }
+
+    .metric {
+      display: grid;
+      gap: 8px;
+    }
+
+    .metric .name {
+      color: var(--muted);
+      font-weight: 760;
+      font-size: 0.88rem;
+      text-transform: uppercase;
+      letter-spacing: 0;
+    }
+
+    .metric .value {
+      font-size: 2.25rem;
+      line-height: 1;
+      font-weight: 830;
+    }
+
+    .metric .copy {
+      margin: 0;
+      color: #343a40;
+    }
+
+    .bar-table {
+      display: grid;
+      gap: 10px;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 18px;
+      overflow: hidden;
+    }
+
+    .bar-row {
+      display: grid;
+      grid-template-columns: minmax(170px, 1.2fr) minmax(120px, 0.8fr) minmax(180px, 1fr) 70px;
+      gap: 12px;
+      align-items: center;
+      min-height: 34px;
+      font-size: 0.95rem;
+    }
+
+    .bar-row.header {
+      color: var(--muted);
+      font-size: 0.78rem;
+      font-weight: 780;
+      text-transform: uppercase;
+      letter-spacing: 0;
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 8px;
+      margin-bottom: 2px;
+    }
+
+    .bar-track {
+      height: 12px;
+      background: #ece7dd;
+      border-radius: 999px;
+      overflow: hidden;
+    }
+
+    .bar-fill {
+      height: 100%;
+      width: calc(var(--score) * 100%);
+      background: linear-gradient(90deg, var(--accent), #65a67a);
+      border-radius: inherit;
+    }
+
+    .bar-fill.minimax {
+      background: linear-gradient(90deg, var(--accent-2), #d5964f);
+    }
+
+    .split {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+      gap: 16px;
+    }
+
+    .prose-sample {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 20px;
+      min-height: 320px;
+    }
+
+    .prose-sample h3,
+    .card h3 {
+      margin: 0 0 10px;
+      font-size: 1.08rem;
+      letter-spacing: 0;
+    }
+
+    .prose-sample p {
+      margin: 0 0 14px;
+      color: #30363c;
+    }
+
+    .prose-sample p:last-child {
+      margin-bottom: 0;
+    }
+
+    .links {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .link-card {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      padding: 18px;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      min-height: 120px;
+      text-decoration: none;
+      color: var(--ink);
+    }
+
+    .link-card strong {
+      font-size: 1.02rem;
+    }
+
+    .link-card span {
+      color: var(--muted);
+      font-size: 0.94rem;
+    }
+
+    .note-band {
+      background: var(--soft-2);
+      border: 1px solid #ead0ac;
+      border-radius: var(--radius);
+      padding: 18px 20px;
+      color: #513415;
+    }
+
+    footer {
+      padding: 42px 0;
+      color: var(--muted);
+      font-size: 0.94rem;
+    }
+
+    @media (max-width: 920px) {
+      header {
+        min-height: auto;
+      }
+
+      .hero-grid,
+      .split,
+      .section-head {
+        grid-template-columns: 1fr;
+        display: grid;
+      }
+
+      .cards,
+      .links {
+        grid-template-columns: 1fr;
+      }
+
+      .bar-row {
+        grid-template-columns: 1fr;
+        gap: 5px;
+        padding: 10px 0;
+        border-bottom: 1px solid rgba(222, 216, 206, 0.62);
+      }
+
+      .bar-row.header {
+        display: none;
+      }
+
+      .bar-row:last-child {
+        border-bottom: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap hero-grid">
+      <div>
+        <div class="eyebrow">MiniMax M3 first-pass LSI demo</div>
+        <h1>Beautiful prose, mixed signal transfer.</h1>
+        <p class="lede">We ran MiniMax M3 through a public-safe slice of the LoveMind Life Story Interview pipeline: fictional synthetic characters for readability, plus aggregate-only benchmark tables from a separate 50-person run.</p>
+        <div class="hero-actions">
+          <a class="button primary" href="#read">Read the side-by-side</a>
+          <a class="button" href="#benchmarks">See the benchmark</a>
+          <a class="button" href="./downloads/minimax_m3_character_public_packet_20260531.zip">Download packet</a>
+        </div>
+        <p class="hero-note">No real PARSEL participant profiles, PIDs, participant-level rows, or private narratives are included here. The synthetic characters are for public model-reading only.</p>
+      </div>
+
+      <aside class="quote-panel" aria-label="MiniMax M3 Roxy Saint-Clair excerpt">
+        <div class="label">MiniMax M3, Roxy Saint-Clair, final LSI section</div>
+        <blockquote>
+          <p>I do not need a eulogy. If someone must say something, I hope they say I was a person of my word, that I showed up, that the garden was good and the basil was tended. I hope they say I was tender in ways I did not name, and that I forgave people because I knew what failing looked like from the inside. I hope they say the music was played, and the uncle was not alone, and the dent stayed in the bumper because the car had earned it. That is the whole of it. I kept my word, and the tomatoes were scalded in August, and the light came through the door. That is enough.</p>
+        </blockquote>
+      </aside>
+    </div>
+  </header>
+
+  <main>
+    <section id="takeaway">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>The honest read</h2>
+          <p class="section-kicker">MiniMax M3 is immediately interesting for prose quality and profile encoding. It is not, on this first run, at the top of the pack for 4-part LSI psychometric recovery.</p>
+        </div>
+
+        <div class="cards">
+          <article class="card metric">
+            <div class="name">Synthetic character profiles</div>
+            <div class="value">0.930-0.971</div>
+            <p class="copy">HEXACO recovery against fictional public targets. Useful for toy readability, not paper evidence.</p>
+          </article>
+          <article class="card metric">
+            <div class="name">50-person profiles</div>
+            <div class="value">0.880-0.884</div>
+            <p class="copy">MiniMax M3 profile generation scored strongly under Gemini 3 Flash in aggregate-only benchmark rows.</p>
+          </article>
+          <article class="card metric">
+            <div class="name">50-person 4-part LSIs</div>
+            <div class="value">0.632-0.636</div>
+            <p class="copy">MiniMax M3 4-part LSI recovery landed below the current Gemini/Gemma/GPT/Qwen band.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="read">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Read it beside the references</h2>
+          <p class="section-kicker">The packet includes Gemma 4 31B and Opus 4.6 outputs for the same fictional characters, so the comparison is easy to inspect without touching any private data.</p>
+        </div>
+
+        <div class="split">
+          <article class="prose-sample">
+            <h3>MiniMax M3 profile sample</h3>
+            <p>You are a study in steady, unperformed order. Your pantry is labeled in a handwriting that does not apologize for itself. Light switches click with a small, decisive sound, and you find a certain comfort in the fact that the silver sedan starts on the first turn of the key, every time, because you have kept it that way.</p>
+            <p>Your people sit close to you. There is a softness in the geography of your affection that you do not perform for anyone, and you are the kind of person who drives forty minutes on a Sunday not because you are asked, but because the pot should be on the stove at eleven and your uncle should not eat alone.</p>
+            <p><a href="./packets/minimax_m3_public_packet/side_by_side_profiles/roxy_saint_clair__interwoven_bio.md">Open the full profile side-by-side</a></p>
+          </article>
+
+          <article class="prose-sample">
+            <h3>MiniMax M3 LSI sample</h3>
+            <p>I know most of them by name. Mr. Henderson two doors down brings me tomatoes in August. I bring him basil. We do not make a ceremony of it. The widower at the end of the cul-de-sac, Theo, I check on him in the winter. I shovel his walk if it snows more than four inches.</p>
+            <p>I do not do it for praise. I do it because I have the shovel, and he is eighty-one, and the walk needs shoveling. I think community is a verb. You either do it or you do not.</p>
+            <p><a href="./packets/minimax_m3_public_packet/side_by_side_lsis/roxy_saint_clair__interwoven_bio.md">Open the full LSI side-by-side</a></p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="benchmarks">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>4-part LSI benchmark</h2>
+          <p class="section-kicker">These rows compare MiniMax M3 against the canonical four-model 4-part LSI band using aggregate HEXACO recovery under Gemini 3 Flash scoring.</p>
+        </div>
+
+        <div class="bar-table" role="table" aria-label="4-part LSI HEXACO recovery comparison">
+          <div class="bar-row header" role="row">
+            <div>Generator</div>
+            <div>Profile format</div>
+            <div>HEXACO recovery</div>
+            <div>r</div>
+          </div>
+          <div class="bar-row" role="row">
+            <div>Gemma 4 31B</div><div>Psychometric-only</div><div class="bar-track"><div class="bar-fill" style="--score: 0.783"></div></div><div>0.783</div>
+          </div>
+          <div class="bar-row" role="row">
+            <div>Gemini 3 Flash</div><div>Psychometric-only</div><div class="bar-track"><div class="bar-fill" style="--score: 0.775"></div></div><div>0.775</div>
+          </div>
+          <div class="bar-row" role="row">
+            <div>Gemma 4 31B</div><div>Interwoven biography</div><div class="bar-track"><div class="bar-fill" style="--score: 0.765"></div></div><div>0.765</div>
+          </div>
+          <div class="bar-row" role="row">
+            <div>GPT-4.1</div><div>Psychometric-only</div><div class="bar-track"><div class="bar-fill" style="--score: 0.758"></div></div><div>0.758</div>
+          </div>
+          <div class="bar-row" role="row">
+            <div>Gemini 3 Flash</div><div>Interwoven biography</div><div class="bar-track"><div class="bar-fill" style="--score: 0.757"></div></div><div>0.757</div>
+          </div>
+          <div class="bar-row" role="row">
+            <div>GPT-4.1</div><div>Interwoven biography</div><div class="bar-track"><div class="bar-fill" style="--score: 0.737"></div></div><div>0.737</div>
+          </div>
+          <div class="bar-row" role="row">
+            <div>Qwen 3.6</div><div>Psychometric-only</div><div class="bar-track"><div class="bar-fill" style="--score: 0.721"></div></div><div>0.721</div>
+          </div>
+          <div class="bar-row" role="row">
+            <div>Qwen 3.6</div><div>Interwoven biography</div><div class="bar-track"><div class="bar-fill" style="--score: 0.692"></div></div><div>0.692</div>
+          </div>
+          <div class="bar-row" role="row">
+            <div>MiniMax M3</div><div>Interwoven biography</div><div class="bar-track"><div class="bar-fill minimax" style="--score: 0.636"></div></div><div>0.636</div>
+          </div>
+          <div class="bar-row" role="row">
+            <div>MiniMax M3</div><div>Psychometric-only</div><div class="bar-track"><div class="bar-fill minimax" style="--score: 0.632"></div></div><div>0.632</div>
+          </div>
+        </div>
+
+        <p class="note-band">The synthetic character metrics are fun to inspect, but this aggregate table is the more serious model-comparison signal. MiniMax M3 profiles were strong; MiniMax M3 4-part LSIs were behind the established comparison band in this first pass.</p>
+      </div>
+    </section>
+
+    <section id="files">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Files</h2>
+          <p class="section-kicker">Everything here is public-safe: synthetic fiction or aggregate-only tables.</p>
+        </div>
+
+        <div class="links">
+          <a class="link-card" href="./packets/minimax_m3_public_packet/README.md">
+            <strong>MiniMax packet README</strong>
+            <span>Folder map, quick-read metrics, and guardrails.</span>
+          </a>
+          <a class="link-card" href="./packets/minimax_m3_public_packet/tables/canonical_4part_generator_comparison_with_minimax.tsv">
+            <strong>Canonical comparison table</strong>
+            <span>4-part LSI aggregate rows with MiniMax M3 beside the four-model band.</span>
+          </a>
+          <a class="link-card" href="./packets/minimax_m3_public_packet/tables/minimax_m3_50pid_aggregate_only.tsv">
+            <strong>MiniMax aggregate-only table</strong>
+            <span>Stage, generator, scorer, metric group, r, and MAE summaries only.</span>
+          </a>
+          <a class="link-card" href="./comparison_packets/">
+            <strong>Additional synthetic packets</strong>
+            <span>Bud, Isolde, and Megyn reference packets from earlier public demos.</span>
+          </a>
+          <a class="link-card" href="./packets/minimax_m3_public_packet/side_by_side_lsis/cillian_frost__interwoven_bio.md">
+            <strong>Cillian side-by-side LSI</strong>
+            <span>Gemma 4 31B, Opus 4.6, and MiniMax M3.</span>
+          </a>
+          <a class="link-card" href="./packets/minimax_m3_public_packet/side_by_side_lsis/haruki_minamoto__interwoven_bio.md">
+            <strong>Haruki side-by-side LSI</strong>
+            <span>Gemma 4 31B, Opus 4.6, and MiniMax M3.</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      LoveMind AI, public synthetic demo. Built May 31, 2026. This repo is separate from reviewer-facing COLM rebuttal materials.
+    </div>
+  </footer>
+</body>
+</html>

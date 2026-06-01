@@ -1,0 +1,6 @@
+scorer	hexaco_mean_r	beyond_hexaco_mean_r
+Sonnet 4.6	0.778	0.623
+Gemini 3 Flash	0.763	0.618
+Qwen 3.6 Plus	0.755	0.612
+Gemma 4 31B	0.757	0.604
+GPT-5.4-Mini	0.739	0.585

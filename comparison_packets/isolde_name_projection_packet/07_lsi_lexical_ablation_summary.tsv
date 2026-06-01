@@ -1,0 +1,13 @@
+character	object	profile_content_words	profile_words_in_original_lsi	profile_words_in_ablated_lsi	profile_word_reduction	profile_word_reduction_pct	original_word_count	ablated_word_count	original_all_dimensions_r	ablated_all_dimensions_r	delta_all_dimensions_r	original_hexaco_r	ablated_hexaco_r	delta_hexaco_r	original_beyond_hexaco_r	ablated_beyond_hexaco_r	delta_beyond_hexaco_r
+Haruki Minamoto	opus_4_6_psych_only	300	143	48	95	0.664	2127	1846	0.896	0.852	-0.044	0.964	0.953	-0.011	0.934	0.830	-0.104
+Isolde Marrow-Lark	opus_4_6_psych_only	300	194	58	136	0.701	2085	1994	0.896	0.867	-0.029	0.939	0.936	-0.003	0.784	0.690	-0.094
+Cillian Frost	gemma_4_31b_psych_only	138	114	19	95	0.833	2028	2039	0.834	0.847	+0.013	0.873	0.889	+0.016	0.924	0.964	+0.040
+Cillian Frost	gemma_4_31b_interwoven_bio	197	141	22	119	0.844	2092	2028	0.865	0.903	+0.038	0.890	0.941	+0.051	0.914	0.890	-0.024
+Haruki Minamoto	gemma_4_31b_interwoven_bio	169	121	22	99	0.818	2150	2057	0.896	0.916	+0.020	0.902	0.928	+0.026	0.908	0.925	+0.017
+Isolde Marrow-Lark	gemma_4_31b_interwoven_bio	185	137	18	119	0.869	2120	2165	0.876	0.939	+0.063	0.970	0.953	-0.017	0.891	0.900	+0.009
+Isolde Marrow-Lark	gemma_4_31b_psych_only	138	104	19	85	0.817	2170	2150	0.898	0.917	+0.019	0.951	0.967	+0.016	0.838	0.811	-0.027
+Cillian Frost	opus_4_6_psych_only	300	113	34	79	0.699	1978	1628	0.774	0.788	+0.014	0.871	0.877	+0.006	0.415	0.370	-0.045
+Haruki Minamoto	opus_4_6_interwoven_bio	300	160	33	127	0.794	2074	2028	0.921	0.906	-0.015	0.946	0.941	-0.005	0.940	0.892	-0.048
+Haruki Minamoto	gemma_4_31b_psych_only	141	103	20	83	0.806	2180	2207	0.910	0.892	-0.018	0.915	0.899	-0.016	0.936	0.923	-0.013
+Isolde Marrow-Lark	opus_4_6_interwoven_bio	300	165	45	120	0.727	2221	2108	0.934	0.916	-0.018	0.979	0.987	+0.008	0.852	0.769	-0.083
+Cillian Frost	opus_4_6_interwoven_bio	300	159	45	114	0.717	2215	1995	0.812	0.850	+0.038	0.912	0.911	-0.001	0.227	0.403	+0.176

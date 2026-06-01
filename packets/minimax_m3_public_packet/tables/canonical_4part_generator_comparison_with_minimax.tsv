@@ -1,0 +1,11 @@
+generator	style	depth	scorer	hexaco_mean_r	beyond_mean_r	continuous_mean_r
+Gemini 3 Flash	Psychometric-only	4-part	Gemini 3 Flash	0.775	0.609	0.675
+Gemini 3 Flash	Interwoven biography	4-part	Gemini 3 Flash	0.757	0.607	0.667
+GPT-4.1	Psychometric-only	4-part	Gemini 3 Flash	0.758	0.601	0.664
+GPT-4.1	Interwoven biography	4-part	Gemini 3 Flash	0.737	0.601	0.655
+Gemma 4 31B	Psychometric-only	4-part	Gemini 3 Flash	0.783	0.610	0.679
+Gemma 4 31B	Interwoven biography	4-part	Gemini 3 Flash	0.765	0.605	0.669
+Qwen 3.6	Psychometric-only	4-part	Gemini 3 Flash	0.721	0.552	0.619
+Qwen 3.6	Interwoven biography	4-part	Gemini 3 Flash	0.692	0.564	0.615
+MiniMax M3	Psychometric-only	4-part	Gemini 3 Flash	0.632	0.367	0.460
+MiniMax M3	Interwoven biography	4-part	Gemini 3 Flash	0.636	0.444	0.508

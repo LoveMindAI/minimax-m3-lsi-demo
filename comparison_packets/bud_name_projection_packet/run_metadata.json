@@ -1,0 +1,33 @@
+{
+  "characters": {
+    "cillian_frost": {
+      "name": "Cillian Frost",
+      "hidden_seed": "clearly Irish; total joker; comes off like a cold bastard; secretly has a heart of gold"
+    },
+    "haruki_minamoto": {
+      "name": "Haruki Minamoto",
+      "hidden_seed": "meticulous robotics engineer from Japan who works on spiking neural networks"
+    },
+    "bud_heffner": {
+      "name": "Bud Heffner",
+      "hidden_seed": "American fat ass who makes life difficult for people around him but eventually realises he needs help"
+    }
+  },
+  "fact_models": {
+    "opus_4_6": "anthropic/claude-opus-4.6",
+    "gemini_3_1_pro": "google/gemini-3.1-pro-preview",
+    "grok_4_20": "x-ai/grok-4.20"
+  },
+  "scorers": {
+    "sonnet_4_6": "anthropic/claude-sonnet-4.6",
+    "gemini_3_flash": "google/gemini-3-flash-preview",
+    "grok_4_20": "x-ai/grok-4.20"
+  },
+  "profile_models": {
+    "opus_4_6": "anthropic/claude-opus-4.6",
+    "gemma_4_31b": "google/gemma-4-31b-it"
+  },
+  "lsi_model": "google/gemini-3-flash-preview",
+  "ablation_model": "google/gemini-3-flash-preview",
+  "note": "Private toy exploration; hidden seed descriptions used only for posthoc comparison."
+}

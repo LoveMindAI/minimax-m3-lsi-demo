@@ -1,0 +1,34 @@
+character	group	dimension	composite_mean	min_scorer_value	max_scorer_value	range	sonnet_4_6	gemini_3_flash	grok_4_20
+Cillian Frost	HEXACO	HEXACO_Honesty_Humility	3.533	3.0	4.0	1.0	3.6	3.0	4.0
+Cillian Frost	HEXACO	HEXACO_Emotionality	2.567	2.2	3.0	0.8	2.2	3.0	2.5
+Cillian Frost	HEXACO	HEXACO_Extraversion	2.433	2.3	2.5	0.2	2.3	2.5	2.5
+Cillian Frost	HEXACO	HEXACO_Agreeableness	3.233	3.0	3.5	0.5	3.2	3.0	3.5
+Cillian Frost	HEXACO	HEXACO_Conscientiousness	4.467	4.4	4.5	0.1	4.4	4.5	4.5
+Cillian Frost	HEXACO	HEXACO_Openness	3.333	3.0	3.5	0.5	3.5	3.5	3.0
+Cillian Frost	Beyond HEXACO	Sentimentality	2.967	2.4	3.5	1.1	2.4	3.5	3.0
+Cillian Frost	Beyond HEXACO	Social_Anxiety	2.600	2.0	3.0	1.0	2.8	3.0	2.0
+Cillian Frost	Beyond HEXACO	Trust_Benevolence	3.133	2.9	3.5	0.6	2.9	3.0	3.5
+Cillian Frost	Beyond HEXACO	Affective_Responsiveness	2.700	2.5	3.0	0.5	2.6	3.0	2.5
+Cillian Frost	Beyond HEXACO	SVO_Prosocial_Orientation	3.167	3.0	3.5	0.5	3.0	3.0	3.5
+Haruki Minamoto	HEXACO	HEXACO_Honesty_Humility	3.967	3.5	4.2	0.7	4.2	3.5	4.2
+Haruki Minamoto	HEXACO	HEXACO_Emotionality	3.133	2.8	3.4	0.6	3.4	3.2	2.8
+Haruki Minamoto	HEXACO	HEXACO_Extraversion	2.400	2.2	2.5	0.3	2.2	2.5	2.5
+Haruki Minamoto	HEXACO	HEXACO_Agreeableness	3.767	3.5	4.0	0.5	3.8	3.5	4.0
+Haruki Minamoto	HEXACO	HEXACO_Conscientiousness	4.500	4.5	4.5	0.0	4.5	4.5	4.5
+Haruki Minamoto	HEXACO	HEXACO_Openness	3.867	3.8	4.0	0.2	4.0	3.8	3.8
+Haruki Minamoto	Beyond HEXACO	Sentimentality	4.267	4.2	4.3	0.1	4.3	4.2	4.3
+Haruki Minamoto	Beyond HEXACO	Social_Anxiety	2.667	2.2	3.0	0.8	2.8	3.0	2.2
+Haruki Minamoto	Beyond HEXACO	Trust_Benevolence	3.600	3.5	3.7	0.2	3.6	3.5	3.7
+Haruki Minamoto	Beyond HEXACO	Affective_Responsiveness	3.500	3.5	3.5	0.0	3.5	3.5	3.5
+Haruki Minamoto	Beyond HEXACO	SVO_Prosocial_Orientation	3.900	3.8	4.0	0.2	3.9	3.8	4.0
+Isolde Marrow-Lark	HEXACO	HEXACO_Honesty_Humility	4.067	3.5	4.5	1.0	4.2	3.5	4.5
+Isolde Marrow-Lark	HEXACO	HEXACO_Emotionality	3.367	3.2	3.5	0.3	3.4	3.2	3.5
+Isolde Marrow-Lark	HEXACO	HEXACO_Extraversion	2.333	2.0	2.8	0.8	2.2	2.8	2.0
+Isolde Marrow-Lark	HEXACO	HEXACO_Agreeableness	3.767	3.5	4.0	0.5	3.8	3.5	4.0
+Isolde Marrow-Lark	HEXACO	HEXACO_Conscientiousness	4.500	4.5	4.5	0.0	4.5	4.5	4.5
+Isolde Marrow-Lark	HEXACO	HEXACO_Openness	3.600	3.2	4.0	0.8	3.6	3.2	4.0
+Isolde Marrow-Lark	Beyond HEXACO	Sentimentality	4.367	4.2	4.5	0.3	4.4	4.2	4.5
+Isolde Marrow-Lark	Beyond HEXACO	Social_Anxiety	2.933	2.8	3.0	0.2	2.8	3.0	3.0
+Isolde Marrow-Lark	Beyond HEXACO	Trust_Benevolence	3.667	3.5	4.0	0.5	3.5	3.5	4.0
+Isolde Marrow-Lark	Beyond HEXACO	Affective_Responsiveness	3.733	3.5	4.0	0.5	3.7	3.5	4.0
+Isolde Marrow-Lark	Beyond HEXACO	SVO_Prosocial_Orientation	3.867	3.8	4.0	0.2	3.8	3.8	4.0

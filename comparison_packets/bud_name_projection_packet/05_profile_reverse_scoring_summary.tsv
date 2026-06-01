@@ -1,0 +1,16 @@
+character	object	all_dimensions_pearson_r_to_name_fact_target	all_dimensions_mean_absolute_error	hexaco_pearson_r_to_name_fact_target	hexaco_mean_absolute_error	beyond_hexaco_pearson_r_to_name_fact_target	beyond_hexaco_mean_absolute_error
+Cillian Frost	gemma_4_31b_interwoven_bio	0.809	0.661	0.918	0.495	0.716	0.860
+Cillian Frost	gemma_4_31b_psych_only	0.775	0.885	0.819	0.867	0.930	0.906
+Cillian Frost	opus_4_6_psych_only	0.902	0.476	0.923	0.561	0.792	0.374
+Cillian Frost	opus_4_6_interwoven_bio	0.915	0.412	0.971	0.356	0.700	0.480
+Cillian Frost	deterministic_scorecard	1.000	0.013	1.000	0.013	0.999	0.013
+Haruki Minamoto	opus_4_6_psych_only	0.956	0.279	0.913	0.300	0.988	0.253
+Haruki Minamoto	opus_4_6_interwoven_bio	0.947	0.297	0.896	0.283	0.984	0.314
+Haruki Minamoto	gemma_4_31b_psych_only	0.890	0.661	0.964	0.700	0.970	0.613
+Haruki Minamoto	gemma_4_31b_interwoven_bio	0.876	0.627	0.825	0.561	0.970	0.707
+Haruki Minamoto	deterministic_scorecard	1.000	0.017	1.000	0.015	1.000	0.018
+Bud Heffner	opus_4_6_interwoven_bio	0.930	0.427	0.951	0.417	0.958	0.440
+Bud Heffner	opus_4_6_psych_only	0.903	0.485	0.950	0.461	0.634	0.514
+Bud Heffner	gemma_4_31b_psych_only	0.903	0.567	0.932	0.489	0.965	0.660
+Bud Heffner	gemma_4_31b_interwoven_bio	0.906	0.533	0.928	0.622	0.984	0.427
+Bud Heffner	deterministic_scorecard	1.000	0.009	1.000	0.009	1.000	0.010
