@@ -388,9 +388,9 @@
   <header>
     <div class="wrap hero-grid">
       <div>
-        <div class="eyebrow">MiniMax M3 first-pass LSI demo</div>
-        <h1>Beautiful prose, mixed signal transfer.</h1>
-        <p class="lede">We ran MiniMax M3 through a public-safe slice of the LoveMind Life Story Interview pipeline: fictional synthetic characters for readability, plus aggregate-only benchmark tables from a separate 50-person run.</p>
+        <div class="eyebrow">MiniMax M3 and rival LSI demo</div>
+        <h1>Beautiful prose, real competition.</h1>
+        <p class="lede">We ran MiniMax M3 through a public-safe slice of the LoveMind Life Story Interview pipeline, then added a quick OpenRouter shootout with MiniMax M2.7, GLM 5.1, MiMo v2.5 Pro, Kimi K2.6, and Qwen 3.7 Max.</p>
         <div class="hero-actions">
           <a class="button primary" href="#read">Read the side-by-side</a>
           <a class="button" href="#benchmarks">See the benchmark</a>
@@ -413,24 +413,48 @@
       <div class="wrap">
         <div class="section-head">
           <h2>The honest read</h2>
-          <p class="section-kicker">MiniMax M3 is immediately interesting for prose quality and profile encoding. It is not, on this first run, at the top of the pack for 4-part LSI psychometric recovery.</p>
+          <p class="section-kicker">MiniMax M3 is immediately interesting for prose quality and profile encoding. In the expanded 4-part LSI run, GLM 5.1 was the surprise transfer winner.</p>
         </div>
 
         <div class="cards">
           <article class="card metric">
-            <div class="name">Synthetic character profiles</div>
+            <div class="name">MiniMax M3 synthetic profiles</div>
             <div class="value">0.930-0.971</div>
             <p class="copy">HEXACO recovery against fictional public targets. Useful for toy readability, not paper evidence.</p>
           </article>
           <article class="card metric">
-            <div class="name">50-person profiles</div>
-            <div class="value">0.880-0.884</div>
-            <p class="copy">MiniMax M3 profile generation scored strongly under Gemini 3 Flash in aggregate-only benchmark rows.</p>
+            <div class="name">Best rival 4-part LSI</div>
+            <div class="value">0.748-0.751</div>
+            <p class="copy">GLM 5.1 led the expanded OpenRouter set under Gemini 3 Flash scoring.</p>
           </article>
           <article class="card metric">
-            <div class="name">50-person 4-part LSIs</div>
+            <div class="name">MiniMax M3 4-part LSIs</div>
             <div class="value">0.632-0.636</div>
             <p class="copy">MiniMax M3 4-part LSI recovery landed below the current Gemini/Gemma/GPT/Qwen band.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="method">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>How the public characters work</h2>
+          <p class="section-kicker">The real benchmark uses research-only psychometric profiles and life facts from real participants. The public reader uses fictional characters so people can inspect the prose without seeing private data.</p>
+        </div>
+
+        <div class="cards">
+          <article class="card">
+            <h3>Name and facts</h3>
+            <p>We started from fictional names such as Roxy Saint-Clair, Cillian Frost, and Haruki Minamoto. Opus and Gemini helped generate toy life facts from the names, then those facts were consolidated into public character skeletons.</p>
+          </article>
+          <article class="card">
+            <h3>Reverse coding</h3>
+            <p>Multiple model raters scored the name-and-fact skeletons into dense toy psychometric targets. These targets are synthetic, public, and deliberately separate from the research-only PARSEL participant data.</p>
+          </article>
+          <article class="card">
+            <h3>Profiles to LSIs</h3>
+            <p>Each generator transformed the toy targets into conditioning portraits, then wrote a 24-section first-person Life Story Interview. The tables ask how recoverable the toy targets remain after each transformation.</p>
           </article>
         </div>
       </div>
@@ -508,6 +532,58 @@
         </div>
 
         <p class="note-band">The synthetic character metrics are fun to inspect, but this aggregate table is the more serious model-comparison signal. MiniMax M3 profiles were strong; MiniMax M3 4-part LSIs were behind the established comparison band in this first pass.</p>
+
+        <div class="section-head" style="margin-top: 42px;">
+          <h2>Expanded OpenRouter shootout</h2>
+          <p class="section-kicker">Same 50-person slice, same 4-part LSI protocol, Gemini 3 Flash scoring. MiniMax M3 scoring was smoke-tested but too slow for this first public drop, so the comparable table below uses the stable Gemini scorer.</p>
+        </div>
+
+        <div class="bar-table" role="table" aria-label="Expanded OpenRouter 4-part LSI HEXACO recovery comparison">
+          <div class="bar-row header" role="row">
+            <div>Generator</div>
+            <div>Profile format</div>
+            <div>HEXACO recovery</div>
+            <div>r</div>
+          </div>
+          <div class="bar-row" role="row">
+            <div>GLM 5.1</div><div>Interwoven biography</div><div class="bar-track"><div class="bar-fill" style="--score: 0.751"></div></div><div>0.751</div>
+          </div>
+          <div class="bar-row" role="row">
+            <div>GLM 5.1</div><div>Psychometric-only</div><div class="bar-track"><div class="bar-fill" style="--score: 0.748"></div></div><div>0.748</div>
+          </div>
+          <div class="bar-row" role="row">
+            <div>Qwen 3.7 Max</div><div>Psychometric-only</div><div class="bar-track"><div class="bar-fill" style="--score: 0.716"></div></div><div>0.716</div>
+          </div>
+          <div class="bar-row" role="row">
+            <div>Kimi K2.6</div><div>Psychometric-only</div><div class="bar-track"><div class="bar-fill" style="--score: 0.686"></div></div><div>0.686</div>
+          </div>
+          <div class="bar-row" role="row">
+            <div>Qwen 3.7 Max</div><div>Interwoven biography</div><div class="bar-track"><div class="bar-fill" style="--score: 0.680"></div></div><div>0.680</div>
+          </div>
+          <div class="bar-row" role="row">
+            <div>Kimi K2.6</div><div>Interwoven biography</div><div class="bar-track"><div class="bar-fill" style="--score: 0.676"></div></div><div>0.676</div>
+          </div>
+          <div class="bar-row" role="row">
+            <div>MiniMax M2.7</div><div>Psychometric-only</div><div class="bar-track"><div class="bar-fill minimax" style="--score: 0.676"></div></div><div>0.676</div>
+          </div>
+          <div class="bar-row" role="row">
+            <div>MiniMax M2.7</div><div>Interwoven biography</div><div class="bar-track"><div class="bar-fill minimax" style="--score: 0.645"></div></div><div>0.645</div>
+          </div>
+          <div class="bar-row" role="row">
+            <div>MiniMax M3</div><div>Interwoven biography</div><div class="bar-track"><div class="bar-fill minimax" style="--score: 0.636"></div></div><div>0.636</div>
+          </div>
+          <div class="bar-row" role="row">
+            <div>MiniMax M3</div><div>Psychometric-only</div><div class="bar-track"><div class="bar-fill minimax" style="--score: 0.632"></div></div><div>0.632</div>
+          </div>
+          <div class="bar-row" role="row">
+            <div>MiMo v2.5 Pro</div><div>Psychometric-only</div><div class="bar-track"><div class="bar-fill" style="--score: 0.621"></div></div><div>0.621</div>
+          </div>
+          <div class="bar-row" role="row">
+            <div>MiMo v2.5 Pro</div><div>Interwoven biography</div><div class="bar-track"><div class="bar-fill" style="--score: 0.612"></div></div><div>0.612</div>
+          </div>
+        </div>
+
+        <p class="note-band">MiniMax M2.7 needed OpenRouter's MiniMax-specific reasoning split flag during generation; without it, one synthetic profile call spent the whole budget on hidden reasoning and returned no final prose. Kimi worked cleanly with `reasoning.effort=none` on OpenRouter despite the route being thinking-capable.</p>
       </div>
     </section>
 
@@ -531,9 +607,25 @@
             <strong>MiniMax aggregate-only table</strong>
             <span>Stage, generator, scorer, metric group, r, and MAE summaries only.</span>
           </a>
+          <a class="link-card" href="./packets/minimax_m3_public_packet/tables/expanded_openrouter_benchmark_digest_20260601.md">
+            <strong>Expanded OpenRouter digest</strong>
+            <span>MiniMax M2.7, GLM 5.1, MiMo, Kimi, Qwen, and MiniMax M3 aggregate rows.</span>
+          </a>
+          <a class="link-card" href="./packets/minimax_m3_public_packet/tables/expanded_generation_behavior_correlations_public_20260601.tsv">
+            <strong>Generation-behaviour correlations</strong>
+            <span>Exploratory public-safe language-behaviour metrics for the 50-person slice.</span>
+          </a>
           <a class="link-card" href="./comparison_packets/">
             <strong>Additional synthetic packets</strong>
             <span>Bud, Isolde, and Megyn reference packets from earlier public demos.</span>
+          </a>
+          <a class="link-card" href="./packets/minimax_m3_public_packet/rival_models_20260601/side_by_side_lsis/roxy_saint_clair__interwoven_bio.md">
+            <strong>Roxy rival LSI side-by-side</strong>
+            <span>MiniMax M2.7, GLM 5.1, MiMo, Kimi, and Qwen on the same synthetic character.</span>
+          </a>
+          <a class="link-card" href="./packets/minimax_m3_public_packet/rival_models_20260601/side_by_side_profiles/roxy_saint_clair__interwoven_bio.md">
+            <strong>Roxy rival profile side-by-side</strong>
+            <span>Read the rival conditioning portraits directly.</span>
           </a>
           <a class="link-card" href="./packets/minimax_m3_public_packet/side_by_side_lsis/cillian_frost__interwoven_bio.md">
             <strong>Cillian side-by-side LSI</strong>
@@ -550,7 +642,7 @@
 
   <footer>
     <div class="wrap">
-      LoveMind AI, public synthetic demo. Built May 31, 2026. This repo is separate from reviewer-facing COLM rebuttal materials.
+      LoveMind AI, public synthetic demo. Built May 31 and updated June 1, 2026. This repo is separate from reviewer-facing COLM rebuttal materials.
     </div>
   </footer>
 </body>
