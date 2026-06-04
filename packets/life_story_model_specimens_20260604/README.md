@@ -10,7 +10,7 @@ PARSEL is the multimodal partner-selection dataset introduced by Tiffany Matej H
 
 ## Tables
 
-- `tables/full_n290_profile_and_lsi_digest.tsv`: full 290-person aggregate digest for Gemma 4 31B, Gemma 4 12B, Gemini 3 Flash, and Qwen 3.6 27B where complete runs exist.
+- `tables/full_n290_profile_and_lsi_digest.tsv`: full 290-person aggregate digest for Gemma 4 31B, Gemma 4 12B, and Qwen 3.6 27B where complete runs exist.
 - `tables/openrouter_50pid_interwoven_digest.tsv`: 50-PID exploratory slice for MiniMax M3 and nearby OpenRouter rivals, using Gemini 3 Flash as scorer.
 - Synthetic character recovery tables copied from the earlier MiniMax M3 packet and the Gemma 4 12B sandbox.
 

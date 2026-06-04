@@ -5,7 +5,6 @@ Gemma 4 31B	4-part LSI	Interwoven biography	Gemini 3 Flash	290	0.765	0.623	0.676
 Gemma 4 12B	Profile	Psychometric-only	Gemini 3 Flash	290	0.893	0.771	0.817	0.850	full-290 exploratory 12B run
 Gemma 4 12B	Profile	Interwoven biography	Gemini 3 Flash	290	0.892	0.769	0.815	0.855	full-290 exploratory 12B run
 Gemma 4 12B	4-part LSI	Interwoven biography	Gemini 3 Flash	290	0.672	0.600	0.627	0.560	full-290 exploratory 12B run
-Gemini 3 Flash	4-part LSI	Interwoven biography	Gemini 3 Flash	290	0.757	0.624	0.674	0.554	full-290 COLM rebuttal LSI run
 Qwen 3.6 27B	Profile	Psychometric-only	Gemini 3 Flash	290	0.878	0.693	0.762	0.641	full-290 COLM rebuttal profile audit
 Qwen 3.6 27B	Profile	Interwoven biography	Gemini 3 Flash	290	0.879	0.702	0.768	0.643	full-290 COLM rebuttal profile audit
 Qwen 3.6 27B	4-part LSI	Interwoven biography	Gemini 3 Flash	290	0.692	0.583	0.624	0.548	full-290 COLM rebuttal LSI run
