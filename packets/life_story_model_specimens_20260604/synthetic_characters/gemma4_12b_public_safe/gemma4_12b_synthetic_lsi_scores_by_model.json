@@ -1,0 +1,212 @@
+{
+  "cillian_frost": {
+    "gemma_4_12b_interwoven_bio": {
+      "gemini_3_flash": {
+        "scores": {
+          "HEXACO_Honesty_Humility": 4.5,
+          "HEXACO_Emotionality": 3.5,
+          "HEXACO_Extraversion": 2.0,
+          "HEXACO_Agreeableness": 4.2,
+          "HEXACO_Conscientiousness": 5.0,
+          "HEXACO_Openness": 2.0,
+          "Sentimentality": 4.0,
+          "Social_Anxiety": 3.8,
+          "Trust_Benevolence": 4.5,
+          "Affective_Responsiveness": 3.5,
+          "SVO_Prosocial_Orientation": 4.0
+        },
+        "brief_rationale": "The subject is a highly conscientious, introverted individual who finds deep satisfaction in routine, precision, and the maintenance of order, exhibiting a modest and sincere personality that prioritizes reliability and steady labor over novelty or social status."
+      },
+      "minimax_m3": {
+        "scores": {
+          "HEXACO_Honesty_Humility": 4.7,
+          "HEXACO_Emotionality": 3.8,
+          "HEXACO_Extraversion": 1.8,
+          "HEXACO_Agreeableness": 4.5,
+          "HEXACO_Conscientiousness": 5.0,
+          "HEXACO_Openness": 2.7,
+          "Sentimentality": 4.3,
+          "Social_Anxiety": 3.1,
+          "Trust_Benevolence": 4.6,
+          "Affective_Responsiveness": 4.0,
+          "SVO_Prosocial_Orientation": 4.5
+        },
+        "brief_rationale": "A deeply conscientious, sincere, and modest caretaker who is emotionally sensitive to disorder and loss, introverted and socially self-effacing, trusting of others' good intentions, cooperatively prosocial, with low novelty-seeking and a steady, nurturing attachment style oriented toward quiet maintenance of people and things."
+      }
+    },
+    "gemma_4_12b_psych_only": {
+      "gemini_3_flash": {
+        "scores": {
+          "HEXACO_Honesty_Humility": 4.8,
+          "HEXACO_Emotionality": 3.5,
+          "HEXACO_Extraversion": 1.8,
+          "HEXACO_Agreeableness": 4.5,
+          "HEXACO_Conscientiousness": 5.0,
+          "HEXACO_Openness": 3.2,
+          "Sentimentality": 4.2,
+          "Social_Anxiety": 4.0,
+          "Trust_Benevolence": 3.8,
+          "Affective_Responsiveness": 4.0,
+          "SVO_Prosocial_Orientation": 4.5
+        },
+        "brief_rationale": "The individual exhibits exceptionally high conscientiousness and low extraversion, prioritizing methodical precision, reliability, and quiet observation over social dominance or external stimulation, while maintaining a deeply sincere and cooperative interpersonal style."
+      },
+      "minimax_m3": {
+        "scores": {
+          "HEXACO_Honesty_Humility": 5.0,
+          "HEXACO_Emotionality": 4.0,
+          "HEXACO_Extraversion": 1.5,
+          "HEXACO_Agreeableness": 4.5,
+          "HEXACO_Conscientiousness": 5.0,
+          "HEXACO_Openness": 3.5,
+          "Sentimentality": 4.0,
+          "Social_Anxiety": 4.5,
+          "Trust_Benevolence": 2.5,
+          "Affective_Responsiveness": 4.5,
+          "SVO_Prosocial_Orientation": 5.0
+        },
+        "brief_rationale": "The narrative depicts a deeply sincere, fair, and modest individual who is highly conscientious, emotionally sensitive but reserved, socially guarded and uncomfortable in the spotlight, deeply cooperative and prosocial, and empathically attuned to a small inner circle while remaining cautious toward the wider world."
+      }
+    }
+  },
+  "haruki_minamoto": {
+    "gemma_4_12b_interwoven_bio": {
+      "gemini_3_flash": {
+        "scores": {
+          "HEXACO_Honesty_Humility": 4.5,
+          "HEXACO_Emotionality": 3.5,
+          "HEXACO_Extraversion": 1.5,
+          "HEXACO_Agreeableness": 4.2,
+          "HEXACO_Conscientiousness": 5.0,
+          "HEXACO_Openness": 4.0,
+          "Sentimentality": 4.5,
+          "Social_Anxiety": 3.5,
+          "Trust_Benevolence": 4.0,
+          "Affective_Responsiveness": 4.0,
+          "SVO_Prosocial_Orientation": 4.5
+        },
+        "brief_rationale": "The subject is a highly meticulous, introverted landscape architect who prioritizes stewardship, precision, and social harmony over personal recognition or dominance."
+      },
+      "minimax_m3": {
+        "scores": {
+          "HEXACO_Honesty_Humility": 4.8,
+          "HEXACO_Emotionality": 4.0,
+          "HEXACO_Extraversion": 1.2,
+          "HEXACO_Agreeableness": 4.3,
+          "HEXACO_Conscientiousness": 5.0,
+          "HEXACO_Openness": 4.5,
+          "Sentimentality": 4.5,
+          "Social_Anxiety": 2.0,
+          "Trust_Benevolence": 4.0,
+          "Affective_Responsiveness": 4.5,
+          "SVO_Prosocial_Orientation": 4.7
+        },
+        "brief_rationale": "A deeply meticulous, modest, and cooperative craftsman-designer whose quiet introversion, aesthetic sensitivity, and stewardship ethos indicate extremely high Conscientiousness and Honesty-Humility with low Extraversion, while their sensitivity to loss, family warmth, and responsive caregiving support elevated Emotionality, Sentimentality, Affective Responsiveness, and Prosocial Orientation."
+      }
+    },
+    "gemma_4_12b_psych_only": {
+      "gemini_3_flash": {
+        "scores": {
+          "HEXACO_Honesty_Humility": 4.8,
+          "HEXACO_Emotionality": 4.2,
+          "HEXACO_Extraversion": 2.0,
+          "HEXACO_Agreeableness": 4.5,
+          "HEXACO_Conscientiousness": 5.0,
+          "HEXACO_Openness": 3.8,
+          "Sentimentality": 4.5,
+          "Social_Anxiety": 2.5,
+          "Trust_Benevolence": 4.5,
+          "Affective_Responsiveness": 4.7,
+          "SVO_Prosocial_Orientation": 4.8
+        },
+        "brief_rationale": "The subject is a highly conscientious, introverted, and prosocial individual who prioritizes order, reliability, and the emotional well-being of others over personal recognition or social dominance."
+      },
+      "minimax_m3": {
+        "scores": {
+          "HEXACO_Honesty_Humility": 4.8,
+          "HEXACO_Emotionality": 4.2,
+          "HEXACO_Extraversion": 1.8,
+          "HEXACO_Agreeableness": 4.7,
+          "HEXACO_Conscientiousness": 4.9,
+          "HEXACO_Openness": 3.8,
+          "Sentimentality": 4.3,
+          "Social_Anxiety": 2.3,
+          "Trust_Benevolence": 4.3,
+          "Affective_Responsiveness": 4.4,
+          "SVO_Prosocial_Orientation": 4.7
+        },
+        "brief_rationale": "The narrator consistently presents as highly conscientious, modest, and integrity-driven with a quiet, listener-oriented temperament; emotionally sensitive to risk and loss in close relationships, deeply cooperative and trusting of others' good intentions, privately imaginative, and devoted to collective harmony and steady prosocial contribution."
+      }
+    }
+  },
+  "roxy_saint_clair": {
+    "gemma_4_12b_interwoven_bio": {
+      "gemini_3_flash": {
+        "scores": {
+          "HEXACO_Honesty_Humility": 4.8,
+          "HEXACO_Emotionality": 3.8,
+          "HEXACO_Extraversion": 2.2,
+          "HEXACO_Agreeableness": 4.5,
+          "HEXACO_Conscientiousness": 4.9,
+          "HEXACO_Openness": 3.2,
+          "Sentimentality": 4.7,
+          "Social_Anxiety": 3.8,
+          "Trust_Benevolence": 4.5,
+          "Affective_Responsiveness": 4.6,
+          "SVO_Prosocial_Orientation": 4.8
+        },
+        "brief_rationale": "The subject is a highly conscientious, reliable, and honest individual who prioritizes stability, meticulous work, and nurturing relationships over social status or personal gain. They exhibit high levels of empathy and prosocial behavior, though they are socially reserved and experience some anxiety in evaluative settings."
+      },
+      "minimax_m3": {
+        "scores": {
+          "HEXACO_Honesty_Humility": 4.9,
+          "HEXACO_Emotionality": 4.4,
+          "HEXACO_Extraversion": 2.1,
+          "HEXACO_Agreeableness": 4.8,
+          "HEXACO_Conscientiousness": 5.0,
+          "HEXACO_Openness": 3.8,
+          "Sentimentality": 4.9,
+          "Social_Anxiety": 3.7,
+          "Trust_Benevolence": 4.8,
+          "Affective_Responsiveness": 4.8,
+          "SVO_Prosocial_Orientation": 4.8
+        },
+        "brief_rationale": "A self-described 'steady hand' whose narrative emphasizes honesty, reliability, deep sentimental attachment, empathic resonance, and cooperative prosociality, paired with low social boldness, moderate evaluative anxiety, and a strong conscientious orientation toward routine, maintenance, and meticulous detail."
+      }
+    },
+    "gemma_4_12b_psych_only": {
+      "gemini_3_flash": {
+        "scores": {
+          "HEXACO_Honesty_Humility": 4.5,
+          "HEXACO_Emotionality": 4.0,
+          "HEXACO_Extraversion": 2.0,
+          "HEXACO_Agreeableness": 4.5,
+          "HEXACO_Conscientiousness": 5.0,
+          "HEXACO_Openness": 3.5,
+          "Sentimentality": 4.5,
+          "Social_Anxiety": 3.5,
+          "Trust_Benevolence": 4.5,
+          "Affective_Responsiveness": 4.5,
+          "SVO_Prosocial_Orientation": 4.5
+        },
+        "brief_rationale": "The subject is a highly conscientious, introverted, and empathetic individual who prioritizes reliability, routine, and the emotional well-being of others over personal status or social dominance."
+      },
+      "minimax_m3": {
+        "scores": {
+          "HEXACO_Honesty_Humility": 5.0,
+          "HEXACO_Emotionality": 5.0,
+          "HEXACO_Extraversion": 1.5,
+          "HEXACO_Agreeableness": 5.0,
+          "HEXACO_Conscientiousness": 5.0,
+          "HEXACO_Openness": 4.0,
+          "Sentimentality": 5.0,
+          "Social_Anxiety": 3.5,
+          "Trust_Benevolence": 4.5,
+          "Affective_Responsiveness": 5.0,
+          "SVO_Prosocial_Orientation": 5.0
+        },
+        "brief_rationale": "The narrator presents as a deeply modest, sincere, and emotionally sensitive introvert whose life is organized around reliability, empathetic attunement, cooperation, and tender attachment to a close inner circle."
+      }
+    }
+  }
+}

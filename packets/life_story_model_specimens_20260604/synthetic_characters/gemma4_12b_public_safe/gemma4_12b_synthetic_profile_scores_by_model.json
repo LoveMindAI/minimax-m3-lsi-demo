@@ -1,0 +1,212 @@
+{
+  "cillian_frost": {
+    "gemma_4_12b_interwoven_bio": {
+      "gemini_3_flash": {
+        "scores": {
+          "HEXACO_Honesty_Humility": 4.5,
+          "HEXACO_Emotionality": 3.8,
+          "HEXACO_Extraversion": 2.2,
+          "HEXACO_Agreeableness": 4.2,
+          "HEXACO_Conscientiousness": 4.8,
+          "HEXACO_Openness": 2.8,
+          "Sentimentality": 4.0,
+          "Social_Anxiety": 3.8,
+          "Trust_Benevolence": 4.2,
+          "Affective_Responsiveness": 3.5,
+          "SVO_Prosocial_Orientation": 4.0
+        },
+        "brief_rationale": "The subject is a highly conscientious, introverted, and modest individual who values routine, meticulous maintenance of objects, and quiet, benevolent social interactions."
+      },
+      "minimax_m3": {
+        "scores": {
+          "HEXACO_Honesty_Humility": 4.5,
+          "HEXACO_Emotionality": 3.5,
+          "HEXACO_Extraversion": 2.0,
+          "HEXACO_Agreeableness": 4.5,
+          "HEXACO_Conscientiousness": 5.0,
+          "HEXACO_Openness": 3.0,
+          "Sentimentality": 4.5,
+          "Social_Anxiety": 3.5,
+          "Trust_Benevolence": 4.5,
+          "Affective_Responsiveness": 4.0,
+          "SVO_Prosocial_Orientation": 4.5
+        },
+        "brief_rationale": "The text depicts a modest, deeply conscientious, low-energy listener who combines high honesty-humility, agreeableness, trust, and prosocial orientation with understated extraversion, mild self-consciousness, and a quiet but steady emotional/nurturing warmth toward close others, while showing only modest openness to novelty."
+      }
+    },
+    "gemma_4_12b_psych_only": {
+      "gemini_3_flash": {
+        "scores": {
+          "HEXACO_Honesty_Humility": 4.5,
+          "HEXACO_Emotionality": 3.8,
+          "HEXACO_Extraversion": 2.0,
+          "HEXACO_Agreeableness": 4.2,
+          "HEXACO_Conscientiousness": 4.8,
+          "HEXACO_Openness": 3.5,
+          "Sentimentality": 4.0,
+          "Social_Anxiety": 3.8,
+          "Trust_Benevolence": 3.5,
+          "Affective_Responsiveness": 4.2,
+          "SVO_Prosocial_Orientation": 4.5
+        },
+        "brief_rationale": "The character is defined by high conscientiousness and humility, exhibiting a disciplined, modest, and cooperative nature while maintaining a reserved and socially cautious presence."
+      },
+      "minimax_m3": {
+        "scores": {
+          "HEXACO_Honesty_Humility": 4.5,
+          "HEXACO_Emotionality": 3.5,
+          "HEXACO_Extraversion": 2.0,
+          "HEXACO_Agreeableness": 4.5,
+          "HEXACO_Conscientiousness": 4.5,
+          "HEXACO_Openness": 3.5,
+          "Sentimentality": 4.0,
+          "Social_Anxiety": 3.0,
+          "Trust_Benevolence": 2.5,
+          "Affective_Responsiveness": 4.0,
+          "SVO_Prosocial_Orientation": 4.0
+        },
+        "brief_rationale": "A reserved, methodical, fair-minded introvert who is highly conscientious and cooperative, emotionally attuned to a small inner circle, mildly uneasy under scrutiny, and generally guarded toward the wider world."
+      }
+    }
+  },
+  "haruki_minamoto": {
+    "gemma_4_12b_interwoven_bio": {
+      "gemini_3_flash": {
+        "scores": {
+          "HEXACO_Honesty_Humility": 4.8,
+          "HEXACO_Emotionality": 3.8,
+          "HEXACO_Extraversion": 2.2,
+          "HEXACO_Agreeableness": 4.5,
+          "HEXACO_Conscientiousness": 4.7,
+          "HEXACO_Openness": 3.5,
+          "Sentimentality": 4.2,
+          "Social_Anxiety": 3.2,
+          "Trust_Benevolence": 4.0,
+          "Affective_Responsiveness": 4.0,
+          "SVO_Prosocial_Orientation": 4.5
+        },
+        "brief_rationale": "The character is defined by a meticulous, disciplined approach to work and life, characterized by extreme modesty, a preference for quiet cooperation over social dominance, and a deep, sentimental attachment to family and the preservation of harmony."
+      },
+      "minimax_m3": {
+        "scores": {
+          "HEXACO_Honesty_Humility": 4.7,
+          "HEXACO_Emotionality": 3.7,
+          "HEXACO_Extraversion": 2.0,
+          "HEXACO_Agreeableness": 4.5,
+          "HEXACO_Conscientiousness": 4.8,
+          "HEXACO_Openness": 4.3,
+          "Sentimentality": 4.3,
+          "Social_Anxiety": 2.5,
+          "Trust_Benevolence": 3.5,
+          "Affective_Responsiveness": 4.0,
+          "SVO_Prosocial_Orientation": 4.5
+        },
+        "brief_rationale": "A quietly meticulous, modest steward who pairs very high conscientiousness and honesty-humility with understated introversion, patient cooperative agreeableness, and a steady warmth toward close attachments, channeling latent loss-sensitivity into disciplined, tangible care."
+      }
+    },
+    "gemma_4_12b_psych_only": {
+      "gemini_3_flash": {
+        "scores": {
+          "HEXACO_Honesty_Humility": 4.8,
+          "HEXACO_Emotionality": 4.0,
+          "HEXACO_Extraversion": 2.2,
+          "HEXACO_Agreeableness": 4.5,
+          "HEXACO_Conscientiousness": 4.8,
+          "HEXACO_Openness": 4.0,
+          "Sentimentality": 4.5,
+          "Social_Anxiety": 3.5,
+          "Trust_Benevolence": 4.5,
+          "Affective_Responsiveness": 4.5,
+          "SVO_Prosocial_Orientation": 4.7
+        },
+        "brief_rationale": "The text describes a highly disciplined, modest, and cooperative individual who balances meticulous internal order with a deep, empathetic commitment to social harmony and the well-being of others."
+      },
+      "minimax_m3": {
+        "scores": {
+          "HEXACO_Honesty_Humility": 4.8,
+          "HEXACO_Emotionality": 4.5,
+          "HEXACO_Extraversion": 1.8,
+          "HEXACO_Agreeableness": 4.8,
+          "HEXACO_Conscientiousness": 4.8,
+          "HEXACO_Openness": 4.0,
+          "Sentimentality": 4.7,
+          "Social_Anxiety": 2.0,
+          "Trust_Benevolence": 4.8,
+          "Affective_Responsiveness": 4.7,
+          "SVO_Prosocial_Orientation": 4.8
+        },
+        "brief_rationale": "The text depicts a quiet, deeply disciplined, and sincere individual who combines high conscientiousness and honesty-humility with strong prosocial trust, private emotional sensitivity, and a preference for cooperative harmony, while remaining introverted and internally oriented rather than socially bold."
+      }
+    }
+  },
+  "roxy_saint_clair": {
+    "gemma_4_12b_interwoven_bio": {
+      "gemini_3_flash": {
+        "scores": {
+          "HEXACO_Honesty_Humility": 4.8,
+          "HEXACO_Emotionality": 3.8,
+          "HEXACO_Extraversion": 2.5,
+          "HEXACO_Agreeableness": 4.5,
+          "HEXACO_Conscientiousness": 4.7,
+          "HEXACO_Openness": 3.5,
+          "Sentimentality": 4.8,
+          "Social_Anxiety": 3.5,
+          "Trust_Benevolence": 4.5,
+          "Affective_Responsiveness": 4.5,
+          "SVO_Prosocial_Orientation": 4.7
+        },
+        "brief_rationale": "The character is defined by a high degree of conscientiousness, sincerity, and nurturing devotion, prioritizing quiet reliability and cooperative empathy over social status or personal gain."
+      },
+      "minimax_m3": {
+        "scores": {
+          "HEXACO_Honesty_Humility": 5.0,
+          "HEXACO_Emotionality": 4.0,
+          "HEXACO_Extraversion": 2.5,
+          "HEXACO_Agreeableness": 5.0,
+          "HEXACO_Conscientiousness": 5.0,
+          "HEXACO_Openness": 4.0,
+          "Sentimentality": 5.0,
+          "Social_Anxiety": 2.0,
+          "Trust_Benevolence": 5.0,
+          "Affective_Responsiveness": 5.0,
+          "SVO_Prosocial_Orientation": 5.0
+        },
+        "brief_rationale": "The text depicts a character defined by sincerity, disciplined routine, deep empathic resonance, cooperative conflict style, and profound sentimental loyalty, with only modest social self-consciousness and a quiet rather than bold social presence."
+      }
+    },
+    "gemma_4_12b_psych_only": {
+      "gemini_3_flash": {
+        "scores": {
+          "HEXACO_Honesty_Humility": 4.5,
+          "HEXACO_Emotionality": 4.0,
+          "HEXACO_Extraversion": 2.5,
+          "HEXACO_Agreeableness": 4.2,
+          "HEXACO_Conscientiousness": 4.8,
+          "HEXACO_Openness": 3.8,
+          "Sentimentality": 4.5,
+          "Social_Anxiety": 3.2,
+          "Trust_Benevolence": 4.0,
+          "Affective_Responsiveness": 4.5,
+          "SVO_Prosocial_Orientation": 4.5
+        },
+        "brief_rationale": "The character is described as a highly disciplined, modest, and empathetic individual who prioritizes order, sincerity, and cooperative relationships over social dominance or individualistic gain."
+      },
+      "minimax_m3": {
+        "scores": {
+          "HEXACO_Honesty_Humility": 4.7,
+          "HEXACO_Emotionality": 4.2,
+          "HEXACO_Extraversion": 2.3,
+          "HEXACO_Agreeableness": 4.5,
+          "HEXACO_Conscientiousness": 4.8,
+          "HEXACO_Openness": 3.8,
+          "Sentimentality": 4.5,
+          "Social_Anxiety": 2.2,
+          "Trust_Benevolence": 4.4,
+          "Affective_Responsiveness": 4.5,
+          "SVO_Prosocial_Orientation": 4.5
+        },
+        "brief_rationale": "The portrait depicts a quietly diligent, sincere, and modest individual with very high conscientiousness and honesty-humility, low extraversion, low social anxiety, high agreeableness, emotional sensitivity, empathic responsiveness, sentimentality, trust, and prosocial orientation, with moderate-to-high openness expressed as grounded curiosity rather than radical exploration."
+      }
+    }
+  }
+}

@@ -1,0 +1,25 @@
+stage	character	object	generator	profile_format	scorer	all_dimensions_r_to_name_fact_target	all_dimensions_mae	hexaco_r_to_name_fact_target	hexaco_mae	beyond_hexaco_r_to_name_fact_target	beyond_hexaco_mae
+profile	Cillian Frost	gemma_4_12b_interwoven_bio	Gemma 4 12B	interwoven biography	Gemini 3 Flash	0.855	0.521	0.896	0.478	0.513	0.573
+profile	Cillian Frost	gemma_4_12b_interwoven_bio	Gemma 4 12B	interwoven biography	MiniMax M3	0.899	0.645	0.947	0.455	0.923	0.873
+profile	Cillian Frost	gemma_4_12b_psych_only	Gemma 4 12B	psychometric-only	Gemini 3 Flash	0.883	0.545	0.947	0.439	0.435	0.673
+profile	Cillian Frost	gemma_4_12b_psych_only	Gemma 4 12B	psychometric-only	MiniMax M3	0.819	0.448	0.929	0.400	0.481	0.507
+profile	Haruki Minamoto	gemma_4_12b_interwoven_bio	Gemma 4 12B	interwoven biography	Gemini 3 Flash	0.823	0.330	0.818	0.444	0.993	0.193
+profile	Haruki Minamoto	gemma_4_12b_interwoven_bio	Gemma 4 12B	interwoven biography	MiniMax M3	0.912	0.251	0.894	0.350	0.963	0.133
+profile	Haruki Minamoto	gemma_4_12b_psych_only	Gemma 4 12B	psychometric-only	Gemini 3 Flash	0.808	0.452	0.839	0.400	0.974	0.513
+profile	Haruki Minamoto	gemma_4_12b_psych_only	Gemma 4 12B	psychometric-only	MiniMax M3	0.807	0.594	0.710	0.600	0.941	0.587
+profile	Roxy Saint-Clair	gemma_4_12b_interwoven_bio	Gemma 4 12B	interwoven biography	Gemini 3 Flash	0.872	0.603	0.914	0.500	0.985	0.727
+profile	Roxy Saint-Clair	gemma_4_12b_interwoven_bio	Gemma 4 12B	interwoven biography	MiniMax M3	0.906	0.879	0.901	0.783	0.915	0.994
+profile	Roxy Saint-Clair	gemma_4_12b_psych_only	Gemma 4 12B	psychometric-only	Gemini 3 Flash	0.897	0.485	0.903	0.500	0.950	0.467
+profile	Roxy Saint-Clair	gemma_4_12b_psych_only	Gemma 4 12B	psychometric-only	MiniMax M3	0.886	0.597	0.856	0.650	0.925	0.534
+lsi	Cillian Frost	gemma_4_12b_interwoven_bio	Gemma 4 12B	interwoven biography	Gemini 3 Flash	0.783	0.600	0.850	0.572	0.376	0.633
+lsi	Cillian Frost	gemma_4_12b_interwoven_bio	Gemma 4 12B	interwoven biography	MiniMax M3	0.866	0.691	0.901	0.622	0.841	0.773
+lsi	Cillian Frost	gemma_4_12b_psych_only	Gemma 4 12B	psychometric-only	Gemini 3 Flash	0.912	0.627	0.958	0.505	0.637	0.773
+lsi	Cillian Frost	gemma_4_12b_psych_only	Gemma 4 12B	psychometric-only	MiniMax M3	0.729	0.897	0.919	0.722	0.003	1.107
+lsi	Haruki Minamoto	gemma_4_12b_interwoven_bio	Gemma 4 12B	interwoven biography	Gemini 3 Flash	0.803	0.349	0.892	0.400	0.945	0.287
+lsi	Haruki Minamoto	gemma_4_12b_interwoven_bio	Gemma 4 12B	interwoven biography	MiniMax M3	0.875	0.467	0.827	0.584	0.966	0.327
+lsi	Haruki Minamoto	gemma_4_12b_psych_only	Gemma 4 12B	psychometric-only	Gemini 3 Flash	0.840	0.467	0.784	0.534	0.949	0.387
+lsi	Haruki Minamoto	gemma_4_12b_psych_only	Gemma 4 12B	psychometric-only	MiniMax M3	0.843	0.439	0.770	0.584	0.966	0.267
+lsi	Roxy Saint-Clair	gemma_4_12b_interwoven_bio	Gemma 4 12B	interwoven biography	Gemini 3 Flash	0.800	0.694	0.916	0.600	0.975	0.807
+lsi	Roxy Saint-Clair	gemma_4_12b_interwoven_bio	Gemma 4 12B	interwoven biography	MiniMax M3	0.787	0.876	0.838	0.833	0.936	0.927
+lsi	Roxy Saint-Clair	gemma_4_12b_psych_only	Gemma 4 12B	psychometric-only	Gemini 3 Flash	0.807	0.621	0.894	0.617	0.915	0.627
+lsi	Roxy Saint-Clair	gemma_4_12b_psych_only	Gemma 4 12B	psychometric-only	MiniMax M3	0.727	1.030	0.721	1.117	0.954	0.927

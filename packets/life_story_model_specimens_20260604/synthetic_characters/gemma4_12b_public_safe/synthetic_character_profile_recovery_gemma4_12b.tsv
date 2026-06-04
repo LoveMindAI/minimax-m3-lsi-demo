@@ -1,0 +1,7 @@
+stage	character	object	generator	profile_format	all_dimensions_r_to_name_fact_target	all_dimensions_mae	hexaco_r_to_name_fact_target	hexaco_mae	beyond_hexaco_r_to_name_fact_target	beyond_hexaco_mae
+profile	Cillian Frost	gemma_4_12b_interwoven_bio	Gemma 4 12B	interwoven biography	0.893	0.580	0.928	0.461	0.846	0.723
+profile	Cillian Frost	gemma_4_12b_psych_only	Gemma 4 12B	psychometric-only	0.874	0.479	0.944	0.414	0.478	0.557
+profile	Haruki Minamoto	gemma_4_12b_interwoven_bio	Gemma 4 12B	interwoven biography	0.891	0.267	0.871	0.375	0.982	0.137
+profile	Haruki Minamoto	gemma_4_12b_psych_only	Gemma 4 12B	psychometric-only	0.825	0.474	0.773	0.500	0.953	0.443
+profile	Roxy Saint-Clair	gemma_4_12b_interwoven_bio	Gemma 4 12B	interwoven biography	0.920	0.680	0.911	0.642	0.940	0.727
+profile	Roxy Saint-Clair	gemma_4_12b_psych_only	Gemma 4 12B	psychometric-only	0.904	0.499	0.880	0.575	0.947	0.407

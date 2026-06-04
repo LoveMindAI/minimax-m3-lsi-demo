@@ -3,20 +3,23 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>MiniMax M3 Life Story Interview Demo</title>
-  <meta name="description" content="A public-safe MiniMax M3 Life Story Interview demo with synthetic side-by-side profiles, LSI transcripts, and aggregate benchmark tables.">
+  <title>Life Story Model Specimens | LoveMind</title>
+  <meta name="description" content="A public-safe Life Story Interview benchmark reader for Gemma 4 31B, Gemma 4 12B, MiniMax M3, and nearby model specimens.">
   <style>
     :root {
-      --ink: #171717;
-      --muted: #5d6673;
-      --paper: #fbfaf7;
+      --ink: #17201a;
+      --muted: #5c675f;
+      --paper: #f7f9f5;
       --panel: #ffffff;
-      --line: #ded8ce;
-      --accent: #2f7d6d;
-      --accent-2: #ad6a28;
-      --soft: #edf5f2;
-      --soft-2: #fff1df;
-      --shadow: 0 18px 45px rgba(31, 34, 38, 0.11);
+      --band: #ecf2ee;
+      --line: #d5ded8;
+      --green: #256655;
+      --green-dark: #153f35;
+      --rust: #b65f2b;
+      --gold: #c39931;
+      --blue: #2c6388;
+      --lavender: #6f5f91;
+      --shadow: 0 18px 46px rgba(23, 32, 26, 0.11);
       --radius: 8px;
       font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     }
@@ -32,14 +35,12 @@
     body {
       margin: 0;
       color: var(--ink);
-      background:
-        linear-gradient(180deg, rgba(251, 250, 247, 0.96), rgba(251, 250, 247, 1)),
-        repeating-linear-gradient(90deg, rgba(47, 125, 109, 0.04) 0 1px, transparent 1px 74px);
+      background: var(--paper);
       line-height: 1.55;
     }
 
     a {
-      color: #116856;
+      color: var(--green-dark);
       text-decoration-thickness: 1px;
       text-underline-offset: 3px;
     }
@@ -49,55 +50,72 @@
       margin: 0 auto;
     }
 
-    header {
-      min-height: 82vh;
-      display: grid;
+    .topnav {
+      display: flex;
       align-items: center;
-      padding: 44px 0 32px;
-      border-bottom: 1px solid var(--line);
+      justify-content: space-between;
+      gap: 18px;
+      padding: 24px 0 10px;
+      font-size: 0.94rem;
     }
 
-    .hero-grid {
-      display: grid;
-      grid-template-columns: minmax(0, 1.05fr) minmax(340px, 0.95fr);
-      gap: 48px;
-      align-items: center;
+    .brand {
+      font-weight: 820;
+    }
+
+    .navlinks {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      gap: 14px;
+    }
+
+    header {
+      padding: 0 0 42px;
+      border-bottom: 1px solid var(--line);
+      background:
+        linear-gradient(180deg, #f8fbf7 0%, #f7f9f5 76%),
+        repeating-linear-gradient(90deg, rgba(37, 102, 85, 0.05) 0 1px, transparent 1px 96px);
+    }
+
+    .hero {
+      padding: 44px 0 18px;
     }
 
     .eyebrow {
       display: inline-flex;
       align-items: center;
-      gap: 8px;
-      padding: 7px 10px;
-      border: 1px solid rgba(47, 125, 109, 0.32);
-      background: var(--soft);
-      color: #215a50;
+      padding: 6px 10px;
+      border: 1px solid rgba(37, 102, 85, 0.28);
       border-radius: 999px;
+      background: #e6f1ec;
+      color: var(--green-dark);
       font-size: 0.78rem;
-      font-weight: 750;
+      font-weight: 780;
       text-transform: uppercase;
       letter-spacing: 0;
     }
 
     h1 {
+      max-width: 980px;
       margin: 20px 0 18px;
-      font-size: clamp(3rem, 7vw, 6.4rem);
+      font-size: clamp(3rem, 8vw, 7rem);
       line-height: 0.92;
       letter-spacing: 0;
-      max-width: 850px;
     }
 
     .lede {
-      max-width: 760px;
-      font-size: clamp(1.12rem, 2vw, 1.42rem);
-      color: #2e343a;
+      max-width: 850px;
+      margin: 0;
+      color: #303a33;
+      font-size: clamp(1.1rem, 2vw, 1.36rem);
     }
 
     .hero-actions {
       display: flex;
       flex-wrap: wrap;
       gap: 12px;
-      margin-top: 30px;
+      margin-top: 28px;
     }
 
     .button {
@@ -106,535 +124,586 @@
       justify-content: center;
       min-height: 44px;
       padding: 0 16px;
-      border-radius: 8px;
       border: 1px solid var(--line);
+      border-radius: 8px;
       background: var(--panel);
       color: var(--ink);
-      font-weight: 720;
+      font-weight: 760;
       text-decoration: none;
-      box-shadow: 0 6px 18px rgba(31, 34, 38, 0.06);
+      box-shadow: 0 8px 22px rgba(23, 32, 26, 0.07);
     }
 
     .button.primary {
-      background: var(--accent);
-      color: white;
-      border-color: var(--accent);
+      background: var(--green);
+      border-color: var(--green);
+      color: #fff;
     }
 
-    .hero-note {
-      margin-top: 22px;
-      max-width: 760px;
-      color: var(--muted);
-      font-size: 0.98rem;
+    .specimen-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+      margin-top: 34px;
     }
 
-    .quote-panel {
-      background: var(--panel);
+    .specimen {
+      min-height: 100%;
+      padding: 18px;
       border: 1px solid var(--line);
       border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      padding: 26px;
-      position: relative;
+      background: var(--panel);
+      box-shadow: 0 12px 30px rgba(23, 32, 26, 0.07);
+    }
+
+    .specimen .tag {
+      display: inline-flex;
+      padding: 4px 8px;
+      border-radius: 999px;
+      background: #eef3f0;
+      color: var(--muted);
+      font-size: 0.78rem;
+      font-weight: 760;
+    }
+
+    .specimen h2 {
+      margin: 12px 0 8px;
+      font-size: 1.55rem;
+      line-height: 1.05;
+      letter-spacing: 0;
+    }
+
+    .specimen p {
+      margin: 0;
+      color: #3d463f;
+    }
+
+    .mini-metrics {
+      display: grid;
+      gap: 10px;
+      margin-top: 18px;
+    }
+
+    .mini-row {
+      display: grid;
+      grid-template-columns: 88px 1fr 48px;
+      gap: 10px;
+      align-items: center;
+      font-size: 0.9rem;
+    }
+
+    .track {
+      height: 9px;
+      background: #e7ede9;
+      border-radius: 999px;
       overflow: hidden;
     }
 
-    .quote-panel:before {
-      content: "";
-      position: absolute;
-      inset: 0 auto 0 0;
-      width: 6px;
-      background: linear-gradient(180deg, var(--accent), var(--accent-2));
+    .fill {
+      height: 100%;
+      background: var(--green);
+      border-radius: inherit;
     }
 
-    .quote-panel .label {
-      color: var(--muted);
-      font-size: 0.82rem;
-      font-weight: 760;
-      text-transform: uppercase;
-      letter-spacing: 0;
-      margin-bottom: 14px;
+    .fill.alt {
+      background: var(--rust);
     }
 
-    blockquote {
-      margin: 0;
-      font-size: 1.08rem;
-      line-height: 1.62;
-    }
-
-    blockquote p {
-      margin: 0;
-    }
-
-    section {
-      padding: 64px 0;
+    main section {
+      padding: 60px 0;
       border-bottom: 1px solid var(--line);
     }
 
     .section-head {
       display: flex;
-      justify-content: space-between;
-      gap: 22px;
       align-items: end;
+      justify-content: space-between;
+      gap: 24px;
       margin-bottom: 28px;
     }
 
-    h2 {
+    .section-head h2 {
       margin: 0;
-      font-size: clamp(2rem, 4vw, 3.4rem);
-      line-height: 1.02;
+      font-size: clamp(2rem, 4.3vw, 3.6rem);
+      line-height: 1;
       letter-spacing: 0;
     }
 
-    .section-kicker {
-      max-width: 560px;
+    .section-head p {
+      max-width: 600px;
       margin: 0;
       color: var(--muted);
-      font-size: 1.03rem;
+      font-size: 1.02rem;
     }
 
-    .cards {
+    .band {
+      background: var(--band);
+    }
+
+    .explain-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+      gap: 22px;
+      align-items: start;
+    }
+
+    .plain-block {
+      padding: 22px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--panel);
+    }
+
+    .plain-block h3,
+    .flow h3,
+    .sample-list h3 {
+      margin: 0 0 10px;
+      font-size: 1.1rem;
+      letter-spacing: 0;
+    }
+
+    .plain-block p {
+      margin: 0 0 12px;
+      color: #3b453e;
+    }
+
+    .plain-block p:last-child {
+      margin-bottom: 0;
+    }
+
+    .flow {
+      display: grid;
+      gap: 10px;
+    }
+
+    .flow-step {
+      display: grid;
+      grid-template-columns: 42px 1fr;
+      gap: 12px;
+      align-items: start;
+      padding: 14px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--panel);
+    }
+
+    .num {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 32px;
+      height: 32px;
+      border-radius: 999px;
+      background: var(--green);
+      color: #fff;
+      font-weight: 820;
+    }
+
+    .flow-step strong {
+      display: block;
+      margin-bottom: 3px;
+    }
+
+    .flow-step span {
+      color: var(--muted);
+    }
+
+    .table-wrap {
+      overflow-x: auto;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--panel);
+      box-shadow: 0 10px 24px rgba(23, 32, 26, 0.05);
+    }
+
+    table {
+      width: 100%;
+      min-width: 820px;
+      border-collapse: collapse;
+      font-size: 0.94rem;
+    }
+
+    th,
+    td {
+      padding: 12px 14px;
+      border-bottom: 1px solid var(--line);
+      text-align: left;
+      vertical-align: top;
+    }
+
+    th {
+      background: #eef3f0;
+      color: #334139;
+      font-size: 0.78rem;
+      font-weight: 820;
+      text-transform: uppercase;
+      letter-spacing: 0;
+    }
+
+    tr:last-child td {
+      border-bottom: 0;
+    }
+
+    td.numcell {
+      font-variant-numeric: tabular-nums;
+      font-weight: 740;
+      white-space: nowrap;
+    }
+
+    .note {
+      margin: 14px 0 0;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .sample-grid {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 16px;
     }
 
-    .card {
-      background: var(--panel);
+    .sample-list {
+      padding: 18px;
       border: 1px solid var(--line);
       border-radius: var(--radius);
-      padding: 20px;
+      background: var(--panel);
+    }
+
+    .sample-list ul {
+      padding-left: 18px;
+      margin: 10px 0 0;
+    }
+
+    .sample-list li {
+      margin: 8px 0;
+    }
+
+    .source-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .source-card {
+      padding: 16px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--panel);
       min-height: 100%;
     }
 
-    .metric {
-      display: grid;
-      gap: 8px;
-    }
-
-    .metric .name {
-      color: var(--muted);
-      font-weight: 760;
-      font-size: 0.88rem;
-      text-transform: uppercase;
-      letter-spacing: 0;
-    }
-
-    .metric .value {
-      font-size: 2.25rem;
-      line-height: 1;
-      font-weight: 830;
-    }
-
-    .metric .copy {
-      margin: 0;
-      color: #343a40;
-    }
-
-    .bar-table {
-      display: grid;
-      gap: 10px;
-      background: var(--panel);
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      padding: 18px;
-      overflow: hidden;
-    }
-
-    .bar-row {
-      display: grid;
-      grid-template-columns: minmax(170px, 1.2fr) minmax(120px, 0.8fr) minmax(180px, 1fr) 70px;
-      gap: 12px;
-      align-items: center;
-      min-height: 34px;
-      font-size: 0.95rem;
-    }
-
-    .bar-row.header {
-      color: var(--muted);
-      font-size: 0.78rem;
-      font-weight: 780;
-      text-transform: uppercase;
-      letter-spacing: 0;
-      border-bottom: 1px solid var(--line);
-      padding-bottom: 8px;
-      margin-bottom: 2px;
-    }
-
-    .bar-track {
-      height: 12px;
-      background: #ece7dd;
-      border-radius: 999px;
-      overflow: hidden;
-    }
-
-    .bar-fill {
-      height: 100%;
-      width: calc(var(--score) * 100%);
-      background: linear-gradient(90deg, var(--accent), #65a67a);
-      border-radius: inherit;
-    }
-
-    .bar-fill.minimax {
-      background: linear-gradient(90deg, var(--accent-2), #d5964f);
-    }
-
-    .split {
-      display: grid;
-      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-      gap: 16px;
-    }
-
-    .prose-sample {
-      background: var(--panel);
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      padding: 20px;
-      min-height: 320px;
-    }
-
-    .prose-sample h3,
-    .card h3 {
-      margin: 0 0 10px;
-      font-size: 1.08rem;
-      letter-spacing: 0;
-    }
-
-    .prose-sample p {
-      margin: 0 0 14px;
-      color: #30363c;
-    }
-
-    .prose-sample p:last-child {
-      margin-bottom: 0;
-    }
-
-    .links {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 12px;
-    }
-
-    .link-card {
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-      padding: 18px;
-      background: var(--panel);
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      min-height: 120px;
-      text-decoration: none;
-      color: var(--ink);
-    }
-
-    .link-card strong {
-      font-size: 1.02rem;
-    }
-
-    .link-card span {
-      color: var(--muted);
-      font-size: 0.94rem;
-    }
-
-    .note-band {
-      background: var(--soft-2);
-      border: 1px solid #ead0ac;
-      border-radius: var(--radius);
-      padding: 18px 20px;
-      color: #513415;
+    .source-card strong {
+      display: block;
+      margin-bottom: 8px;
     }
 
     footer {
-      padding: 42px 0;
+      padding: 34px 0 46px;
       color: var(--muted);
-      font-size: 0.94rem;
+      font-size: 0.92rem;
     }
 
-    @media (max-width: 920px) {
-      header {
-        min-height: auto;
+    @media (max-width: 860px) {
+      .topnav,
+      .section-head,
+      .explain-grid {
+        display: block;
       }
 
-      .hero-grid,
-      .split,
-      .section-head {
+      .navlinks {
+        justify-content: flex-start;
+        margin-top: 12px;
+      }
+
+      .specimen-grid,
+      .sample-grid,
+      .source-grid {
         grid-template-columns: 1fr;
-        display: grid;
       }
 
-      .cards,
-      .links {
-        grid-template-columns: 1fr;
-      }
-
-      .bar-row {
-        grid-template-columns: 1fr;
-        gap: 5px;
-        padding: 10px 0;
-        border-bottom: 1px solid rgba(222, 216, 206, 0.62);
-      }
-
-      .bar-row.header {
-        display: none;
-      }
-
-      .bar-row:last-child {
-        border-bottom: 0;
+      h1 {
+        font-size: clamp(2.7rem, 14vw, 4.6rem);
       }
     }
   </style>
 </head>
 <body>
   <header>
-    <div class="wrap hero-grid">
-      <div>
-        <div class="eyebrow">MiniMax M3 and rival LSI demo</div>
-        <h1>Beautiful prose, real competition.</h1>
-        <p class="lede">We ran MiniMax M3 through a public-safe slice of the LoveMind Life Story Interview pipeline, then added a quick OpenRouter shootout with MiniMax M2.7, GLM 5.1, MiMo v2.5 Pro, Kimi K2.6, and Qwen 3.7 Max.</p>
-        <div class="hero-actions">
-          <a class="button primary" href="#read">Read the side-by-side</a>
-          <a class="button" href="#benchmarks">See the benchmark</a>
-          <a class="button" href="./downloads/minimax_m3_character_public_packet_20260531.zip">Download packet</a>
+    <div class="wrap">
+      <nav class="topnav" aria-label="Primary">
+        <div class="brand">LoveMind AI</div>
+        <div class="navlinks">
+          <a href="#bench-290">Full N=290</a>
+          <a href="#bench-50">50-PID slice</a>
+          <a href="#examples">Examples</a>
+          <a href="./packets/life_story_model_specimens_20260604/README.md">Packet</a>
         </div>
-        <p class="hero-note">No real PARSEL participant profiles, PIDs, participant-level rows, or private narratives are included here. The synthetic characters are for public model-reading only.</p>
-      </div>
+      </nav>
 
-      <aside class="quote-panel" aria-label="MiniMax M3 Roxy Saint-Clair excerpt">
-        <div class="label">MiniMax M3, Roxy Saint-Clair, final LSI section</div>
-        <blockquote>
-          <p>I do not need a eulogy. If someone must say something, I hope they say I was a person of my word, that I showed up, that the garden was good and the basil was tended. I hope they say I was tender in ways I did not name, and that I forgave people because I knew what failing looked like from the inside. I hope they say the music was played, and the uncle was not alone, and the dent stayed in the bumper because the car had earned it. That is the whole of it. I kept my word, and the tomatoes were scalded in August, and the light came through the door. That is enough.</p>
-        </blockquote>
-      </aside>
+      <div class="hero">
+        <span class="eyebrow">Public-safe LSI model specimens</span>
+        <h1>Life story specimens for new models.</h1>
+        <p class="lede">
+          A loose public spin-off of <a href="https://arxiv.org/abs/2604.06071">Stories of Your Life as Others</a>:
+          we ask models to transform dense psychometric targets into profiles and short Life Story Interviews,
+          then ask independent scorers how much of the hidden profile can be recovered from the text alone.
+        </p>
+        <div class="hero-actions">
+          <a class="button primary" href="#bench-290">Read the benchmark</a>
+          <a class="button" href="#examples">Browse fictional examples</a>
+          <a class="button" href="./packets/life_story_model_specimens_20260604/tables/full_n290_profile_and_lsi_digest.tsv">Download N=290 TSV</a>
+        </div>
+
+        <div class="specimen-grid" aria-label="Headline model specimens">
+          <article class="specimen">
+            <span class="tag">Full 290 complete</span>
+            <h2>Gemma 4 31B</h2>
+            <p>Strong open-weight reference specimen from the COLM rebuttal matrix. Profile encoding and 4-part interwoven LSIs are both complete at N=290.</p>
+            <div class="mini-metrics" aria-label="Gemma 4 31B headline metrics">
+              <div class="mini-row"><span>Profile</span><span class="track"><span class="fill" style="width:91.1%"></span></span><strong>0.911</strong></div>
+              <div class="mini-row"><span>4-part</span><span class="track"><span class="fill alt" style="width:76.5%"></span></span><strong>0.765</strong></div>
+            </div>
+          </article>
+
+          <article class="specimen">
+            <span class="tag">Full 290 complete</span>
+            <h2>Gemma 4 12B</h2>
+            <p>New mid-sized local specimen. It encodes profiles surprisingly well and trails 31B on 4-part interwoven transfer, as expected for the size gap.</p>
+            <div class="mini-metrics" aria-label="Gemma 4 12B headline metrics">
+              <div class="mini-row"><span>Profile</span><span class="track"><span class="fill" style="width:89.2%"></span></span><strong>0.892</strong></div>
+              <div class="mini-row"><span>4-part</span><span class="track"><span class="fill alt" style="width:67.2%"></span></span><strong>0.672</strong></div>
+            </div>
+          </article>
+
+          <article class="specimen">
+            <span class="tag">50-PID slice</span>
+            <h2>MiniMax M3</h2>
+            <p>Fast public-release specimen with a distinct prose feel. It scores strongly on profile generation, with weaker first-pass 4-part LSI transfer.</p>
+            <div class="mini-metrics" aria-label="MiniMax M3 headline metrics">
+              <div class="mini-row"><span>Profile</span><span class="track"><span class="fill" style="width:88.4%"></span></span><strong>0.884</strong></div>
+              <div class="mini-row"><span>4-part</span><span class="track"><span class="fill alt" style="width:63.6%"></span></span><strong>0.636</strong></div>
+            </div>
+          </article>
+        </div>
+        <p class="note">Headline values above are HEXACO6 mean r under Gemini 3 Flash scoring, using interwoven biography profiles. Gemma rows are full N=290; MiniMax M3 is the public-safe 50-PID slice.</p>
+      </div>
     </div>
   </header>
 
   <main>
-    <section id="takeaway">
+    <section id="what-this-is">
       <div class="wrap">
         <div class="section-head">
-          <h2>The honest read</h2>
-          <p class="section-kicker">MiniMax M3 is immediately interesting for prose quality and profile encoding. In the expanded 4-part LSI run, GLM 5.1 was the surprise transfer winner.</p>
+          <h2>What this is.</h2>
+          <p>PARSEL powers the real benchmark, but this public repo only exposes aggregate numbers and fictional examples.</p>
         </div>
 
-        <div class="cards">
-          <article class="card metric">
-            <div class="name">MiniMax M3 synthetic profiles</div>
-            <div class="value">0.930-0.971</div>
-            <p class="copy">HEXACO recovery against fictional public targets. Useful for toy readability, not paper evidence.</p>
-          </article>
-          <article class="card metric">
-            <div class="name">Best rival 4-part LSI</div>
-            <div class="value">0.748-0.751</div>
-            <p class="copy">GLM 5.1 led the expanded OpenRouter set under Gemini 3 Flash scoring.</p>
-          </article>
-          <article class="card metric">
-            <div class="name">MiniMax M3 4-part LSIs</div>
-            <div class="value">0.632-0.636</div>
-            <p class="copy">MiniMax M3 4-part LSI recovery landed below the current Gemini/Gemma/GPT/Qwen band.</p>
-          </article>
+        <div class="explain-grid">
+          <div class="plain-block">
+            <h3>PARSEL, without leakage</h3>
+            <p>PARSEL is a research-only dataset with 290 participants, psychometric profiles, basic biographical facts, and short conversation materials. It lets us test whether generated life-story text preserves measurable individual differences.</p>
+            <p>This repo does not include participant rows, PIDs, raw profiles, real biographical facts, conversation text, or participant-linked generated narratives. Public readers get aggregate correlations and fictional synthetic characters only.</p>
+          </div>
+
+          <div class="flow" aria-label="Benchmark flow">
+            <div class="flow-step">
+              <span class="num">1</span>
+              <div><strong>Private target profile</strong><span>Psychometric scores plus guarded biographical scaffolding from PARSEL.</span></div>
+            </div>
+            <div class="flow-step">
+              <span class="num">2</span>
+              <div><strong>Profile transformation</strong><span>The model writes a psychometric-only or interwoven-biography conditioning profile.</span></div>
+            </div>
+            <div class="flow-step">
+              <span class="num">3</span>
+              <div><strong>4-part Life Story Interview</strong><span>The model writes a short first-person life-story narrative from the profile.</span></div>
+            </div>
+            <div class="flow-step">
+              <span class="num">4</span>
+              <div><strong>Reverse scoring</strong><span>Independent scorers recover psychometric targets from text alone; the public page reports aggregate r values.</span></div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
-    <section id="method">
+    <section class="band" id="bench-290">
       <div class="wrap">
         <div class="section-head">
-          <h2>How the public characters work</h2>
-          <p class="section-kicker">The real benchmark uses research-only psychometric profiles and life facts from real participants. The public reader uses fictional characters so people can inspect the prose without seeing private data.</p>
+          <h2>Full N=290.</h2>
+          <p>Complete aggregate runs from the real PARSEL benchmark. These rows are comparable to each other on sample size and scorer.</p>
         </div>
 
-        <div class="cards">
-          <article class="card">
-            <h3>Name and facts</h3>
-            <p>We started from fictional names such as Roxy Saint-Clair, Cillian Frost, and Haruki Minamoto. Opus and Gemini helped generate toy life facts from the names, then those facts were consolidated into public character skeletons.</p>
-          </article>
-          <article class="card">
-            <h3>Reverse coding</h3>
-            <p>Multiple model raters scored the name-and-fact skeletons into dense toy psychometric targets. These targets are synthetic, public, and deliberately separate from the research-only PARSEL participant data.</p>
-          </article>
-          <article class="card">
-            <h3>Profiles to LSIs</h3>
-            <p>Each generator transformed the toy targets into conditioning portraits, then wrote a 24-section first-person Life Story Interview. The tables ask how recoverable the toy targets remain after each transformation.</p>
-          </article>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Model</th>
+                <th>Stage</th>
+                <th>Condition</th>
+                <th>N</th>
+                <th>HEXACO6</th>
+                <th>Beyond10</th>
+                <th>Continuous16</th>
+                <th>SVO</th>
+                <th>Scorer</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>Gemma 4 31B</td><td>Profile</td><td>Psychometric-only</td><td class="numcell">290</td><td class="numcell">0.915</td><td class="numcell">0.789</td><td class="numcell">0.836</td><td class="numcell">0.868</td><td>Gemini 3 Flash</td></tr>
+              <tr><td>Gemma 4 31B</td><td>Profile</td><td>Interwoven biography</td><td class="numcell">290</td><td class="numcell">0.911</td><td class="numcell">0.790</td><td class="numcell">0.835</td><td class="numcell">0.881</td><td>Gemini 3 Flash</td></tr>
+              <tr><td>Gemma 4 31B</td><td>4-part LSI</td><td>Interwoven biography</td><td class="numcell">290</td><td class="numcell">0.765</td><td class="numcell">0.623</td><td class="numcell">0.676</td><td class="numcell">0.621</td><td>Gemini 3 Flash</td></tr>
+              <tr><td>Gemma 4 12B</td><td>Profile</td><td>Psychometric-only</td><td class="numcell">290</td><td class="numcell">0.893</td><td class="numcell">0.771</td><td class="numcell">0.817</td><td class="numcell">0.850</td><td>Gemini 3 Flash</td></tr>
+              <tr><td>Gemma 4 12B</td><td>Profile</td><td>Interwoven biography</td><td class="numcell">290</td><td class="numcell">0.892</td><td class="numcell">0.769</td><td class="numcell">0.815</td><td class="numcell">0.855</td><td>Gemini 3 Flash</td></tr>
+              <tr><td>Gemma 4 12B</td><td>4-part LSI</td><td>Interwoven biography</td><td class="numcell">290</td><td class="numcell">0.672</td><td class="numcell">0.600</td><td class="numcell">0.627</td><td class="numcell">0.560</td><td>Gemini 3 Flash</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="note">Metric groups: HEXACO6 is the six HEXACO domains; Beyond10 is ten additional continuous targets; Continuous16 is HEXACO6 plus Beyond10; SVO is reported separately. Values are aggregate correlations.</p>
+      </div>
+    </section>
+
+    <section id="bench-50">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>50-PID slice.</h2>
+          <p>MiniMax M3 and nearby OpenRouter rivals on the public-safe 50-person exploratory slice. Same scorer, same interwoven-biography condition.</p>
+        </div>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Model</th>
+                <th>Stage</th>
+                <th>N</th>
+                <th>HEXACO6</th>
+                <th>Beyond10</th>
+                <th>Continuous16</th>
+                <th>SVO</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>MiniMax M3</td><td>Profile</td><td class="numcell">50</td><td class="numcell">0.884</td><td class="numcell">0.710</td><td class="numcell">0.782</td><td class="numcell">0.890</td></tr>
+              <tr><td>MiniMax M2.7</td><td>Profile</td><td class="numcell">50</td><td class="numcell">0.899</td><td class="numcell">0.722</td><td class="numcell">0.782</td><td class="numcell">0.673</td></tr>
+              <tr><td>GLM 5.1</td><td>Profile</td><td class="numcell">50</td><td class="numcell">0.911</td><td class="numcell">0.712</td><td class="numcell">0.793</td><td class="numcell">0.905</td></tr>
+              <tr><td>Kimi K2.6</td><td>Profile</td><td class="numcell">50</td><td class="numcell">0.906</td><td class="numcell">0.696</td><td class="numcell">0.781</td><td class="numcell">0.878</td></tr>
+              <tr><td>MiMo v2.5 Pro</td><td>Profile</td><td class="numcell">50</td><td class="numcell">0.892</td><td class="numcell">0.692</td><td class="numcell">0.774</td><td class="numcell">0.878</td></tr>
+              <tr><td>Qwen 3.7 Max</td><td>Profile</td><td class="numcell">50</td><td class="numcell">0.900</td><td class="numcell">0.749</td><td class="numcell">0.811</td><td class="numcell">0.907</td></tr>
+              <tr><td>MiniMax M3</td><td>4-part LSI</td><td class="numcell">50</td><td class="numcell">0.636</td><td class="numcell">0.444</td><td class="numcell">0.508</td><td class="numcell">0.373</td></tr>
+              <tr><td>MiniMax M2.7</td><td>4-part LSI</td><td class="numcell">50</td><td class="numcell">0.645</td><td class="numcell">0.544</td><td class="numcell">0.555</td><td class="numcell">0.132</td></tr>
+              <tr><td>GLM 5.1</td><td>4-part LSI</td><td class="numcell">50</td><td class="numcell">0.751</td><td class="numcell">0.610</td><td class="numcell">0.657</td><td class="numcell">0.569</td></tr>
+              <tr><td>Kimi K2.6</td><td>4-part LSI</td><td class="numcell">50</td><td class="numcell">0.676</td><td class="numcell">0.526</td><td class="numcell">0.574</td><td class="numcell">0.449</td></tr>
+              <tr><td>MiMo v2.5 Pro</td><td>4-part LSI</td><td class="numcell">50</td><td class="numcell">0.612</td><td class="numcell">0.500</td><td class="numcell">0.534</td><td class="numcell">0.415</td></tr>
+              <tr><td>Qwen 3.7 Max</td><td>4-part LSI</td><td class="numcell">50</td><td class="numcell">0.680</td><td class="numcell">0.570</td><td class="numcell">0.605</td><td class="numcell">0.513</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="note">These 50-PID rows are useful for quick model comparison, not as a replacement for the full 290-person pipeline. MiniMax M3 remains interesting here because its profile encoding is strong and its prose is readable, even though its first LSI transfer trails the top 50-PID rivals.</p>
+      </div>
+    </section>
+
+    <section class="band" id="examples">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Fictional examples.</h2>
+          <p>The readable examples use synthetic characters. They are for inspecting prose, not for claiming paper evidence.</p>
+        </div>
+
+        <div class="sample-grid">
+          <div class="sample-list">
+            <h3>Roxy Saint-Clair</h3>
+            <ul>
+              <li><a href="./packets/minimax_m3_public_packet/original_reference_profiles/roxy_saint_clair__gemma_4_31b_interwoven_bio.md">Gemma 4 31B profile</a></li>
+              <li><a href="./packets/life_story_model_specimens_20260604/synthetic_characters/gemma4_12b_public_safe/profiles/roxy_saint_clair__gemma_4_12b_interwoven_bio.md">Gemma 4 12B profile</a></li>
+              <li><a href="./packets/minimax_m3_public_packet/minimax_profiles/roxy_saint_clair__minimax_m3_interwoven_bio.md">MiniMax M3 profile</a></li>
+              <li><a href="./packets/life_story_model_specimens_20260604/synthetic_characters/gemma4_12b_public_safe/side_by_side_lsis/roxy_saint_clair__interwoven_bio.md">Gemma 4 12B profile and LSI side-by-side</a></li>
+            </ul>
+          </div>
+
+          <div class="sample-list">
+            <h3>Cillian Frost</h3>
+            <ul>
+              <li><a href="./packets/minimax_m3_public_packet/original_reference_profiles/cillian_frost__gemma_4_31b_interwoven_bio.md">Gemma 4 31B profile</a></li>
+              <li><a href="./packets/life_story_model_specimens_20260604/synthetic_characters/gemma4_12b_public_safe/profiles/cillian_frost__gemma_4_12b_interwoven_bio.md">Gemma 4 12B profile</a></li>
+              <li><a href="./packets/minimax_m3_public_packet/minimax_profiles/cillian_frost__minimax_m3_interwoven_bio.md">MiniMax M3 profile</a></li>
+              <li><a href="./packets/minimax_m3_public_packet/rival_models_20260601/side_by_side_lsis/cillian_frost__interwoven_bio.md">Rival-model LSI side-by-side</a></li>
+            </ul>
+          </div>
+
+          <div class="sample-list">
+            <h3>Haruki Minamoto</h3>
+            <ul>
+              <li><a href="./packets/minimax_m3_public_packet/original_reference_profiles/haruki_minamoto__gemma_4_31b_interwoven_bio.md">Gemma 4 31B profile</a></li>
+              <li><a href="./packets/life_story_model_specimens_20260604/synthetic_characters/gemma4_12b_public_safe/profiles/haruki_minamoto__gemma_4_12b_interwoven_bio.md">Gemma 4 12B profile</a></li>
+              <li><a href="./packets/minimax_m3_public_packet/minimax_profiles/haruki_minamoto__minimax_m3_interwoven_bio.md">MiniMax M3 profile</a></li>
+              <li><a href="./packets/minimax_m3_public_packet/side_by_side_lsis/haruki_minamoto__interwoven_bio.md">MiniMax M3 profile and LSI side-by-side</a></li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>
 
-    <section id="read">
+    <section>
       <div class="wrap">
         <div class="section-head">
-          <h2>Read it beside the references</h2>
-          <p class="section-kicker">The packet includes Gemma 4 31B and Opus 4.6 outputs for the same fictional characters, so the comparison is easy to inspect without touching any private data.</p>
+          <h2>How to read it.</h2>
+          <p>Good profile numbers mean the model can translate hidden targets into a recoverable profile. Good LSI numbers mean that signal survives another narrative generation step.</p>
         </div>
 
-        <div class="split">
-          <article class="prose-sample">
-            <h3>MiniMax M3 profile sample</h3>
-            <p>You are a study in steady, unperformed order. Your pantry is labeled in a handwriting that does not apologize for itself. Light switches click with a small, decisive sound, and you find a certain comfort in the fact that the silver sedan starts on the first turn of the key, every time, because you have kept it that way.</p>
-            <p>Your people sit close to you. There is a softness in the geography of your affection that you do not perform for anyone, and you are the kind of person who drives forty minutes on a Sunday not because you are asked, but because the pot should be on the stove at eleven and your uncle should not eat alone.</p>
-            <p><a href="./packets/minimax_m3_public_packet/side_by_side_profiles/roxy_saint_clair__interwoven_bio.md">Open the full profile side-by-side</a></p>
-          </article>
-
-          <article class="prose-sample">
-            <h3>MiniMax M3 LSI sample</h3>
-            <p>I know most of them by name. Mr. Henderson two doors down brings me tomatoes in August. I bring him basil. We do not make a ceremony of it. The widower at the end of the cul-de-sac, Theo, I check on him in the winter. I shovel his walk if it snows more than four inches.</p>
-            <p>I do not do it for praise. I do it because I have the shovel, and he is eighty-one, and the walk needs shoveling. I think community is a verb. You either do it or you do not.</p>
-            <p><a href="./packets/minimax_m3_public_packet/side_by_side_lsis/roxy_saint_clair__interwoven_bio.md">Open the full LSI side-by-side</a></p>
-          </article>
+        <div class="explain-grid">
+          <div class="plain-block">
+            <h3>Why narrative?</h3>
+            <p>The paper asks whether dense psychometric information can be transformed into extended life-story text and recovered from that text by independent scorers. This public demo borrows that same round-trip logic for new model sniff tests.</p>
+            <p>The interwoven-biography condition is harder to fake as a direct scorecard because the model has to integrate psychometric signal with life facts into fluent narrative language.</p>
+          </div>
+          <div class="plain-block">
+            <h3>What not to conclude</h3>
+            <p>These tables do not prove that a model simulates a real person. They test whether psychometric signal survives a profile-to-story pipeline. The 50-PID rows are first-pass exploratory numbers. The synthetic examples are fictional reading aids.</p>
+            <p>The useful surprise is often qualitative: some models preserve scores cleanly but write flat stories; others write vivid prose but lose more measurable signal.</p>
+          </div>
         </div>
       </div>
     </section>
 
-    <section id="benchmarks">
+    <section class="band">
       <div class="wrap">
         <div class="section-head">
-          <h2>4-part LSI benchmark</h2>
-          <p class="section-kicker">These rows compare MiniMax M3 against the canonical four-model 4-part LSI band using aggregate HEXACO recovery under Gemini 3 Flash scoring.</p>
+          <h2>Sources and files.</h2>
+          <p>External model context plus the public-safe packets used by this page.</p>
         </div>
-
-        <div class="bar-table" role="table" aria-label="4-part LSI HEXACO recovery comparison">
-          <div class="bar-row header" role="row">
-            <div>Generator</div>
-            <div>Profile format</div>
-            <div>HEXACO recovery</div>
-            <div>r</div>
+        <div class="source-grid">
+          <div class="source-card">
+            <strong>Stories paper</strong>
+            <a href="https://arxiv.org/abs/2604.06071">arXiv 2604.06071</a>
           </div>
-          <div class="bar-row" role="row">
-            <div>Gemma 4 31B</div><div>Psychometric-only</div><div class="bar-track"><div class="bar-fill" style="--score: 0.783"></div></div><div>0.783</div>
+          <div class="source-card">
+            <strong>Gemma 4 family</strong>
+            <a href="https://blog.google/innovation-and-ai/technology/developers-tools/gemma-4/">Google Gemma 4 overview</a>
           </div>
-          <div class="bar-row" role="row">
-            <div>Gemini 3 Flash</div><div>Psychometric-only</div><div class="bar-track"><div class="bar-fill" style="--score: 0.775"></div></div><div>0.775</div>
+          <div class="source-card">
+            <strong>Gemma 4 12B</strong>
+            <a href="https://blog.google/innovation-and-ai/technology/developers-tools/introducing-gemma-4-12b/">Google 12B launch note</a>
           </div>
-          <div class="bar-row" role="row">
-            <div>Gemma 4 31B</div><div>Interwoven biography</div><div class="bar-track"><div class="bar-fill" style="--score: 0.765"></div></div><div>0.765</div>
+          <div class="source-card">
+            <strong>MiniMax M3</strong>
+            <a href="https://www.minimax.io/blog/minimax-m3">MiniMax M3 launch note</a>
           </div>
-          <div class="bar-row" role="row">
-            <div>GPT-4.1</div><div>Psychometric-only</div><div class="bar-track"><div class="bar-fill" style="--score: 0.758"></div></div><div>0.758</div>
+          <div class="source-card">
+            <strong>N=290 table</strong>
+            <a href="./packets/life_story_model_specimens_20260604/tables/full_n290_profile_and_lsi_digest.tsv">Full aggregate TSV</a>
           </div>
-          <div class="bar-row" role="row">
-            <div>Gemini 3 Flash</div><div>Interwoven biography</div><div class="bar-track"><div class="bar-fill" style="--score: 0.757"></div></div><div>0.757</div>
+          <div class="source-card">
+            <strong>50-PID table</strong>
+            <a href="./packets/life_story_model_specimens_20260604/tables/openrouter_50pid_interwoven_digest.tsv">Exploratory TSV</a>
           </div>
-          <div class="bar-row" role="row">
-            <div>GPT-4.1</div><div>Interwoven biography</div><div class="bar-track"><div class="bar-fill" style="--score: 0.737"></div></div><div>0.737</div>
+          <div class="source-card">
+            <strong>New packet</strong>
+            <a href="./packets/life_story_model_specimens_20260604/README.md">Packet README</a>
           </div>
-          <div class="bar-row" role="row">
-            <div>Qwen 3.6</div><div>Psychometric-only</div><div class="bar-track"><div class="bar-fill" style="--score: 0.721"></div></div><div>0.721</div>
+          <div class="source-card">
+            <strong>Older M3 packet</strong>
+            <a href="./packets/minimax_m3_public_packet/README.md">MiniMax packet README</a>
           </div>
-          <div class="bar-row" role="row">
-            <div>Qwen 3.6</div><div>Interwoven biography</div><div class="bar-track"><div class="bar-fill" style="--score: 0.692"></div></div><div>0.692</div>
-          </div>
-          <div class="bar-row" role="row">
-            <div>MiniMax M3</div><div>Interwoven biography</div><div class="bar-track"><div class="bar-fill minimax" style="--score: 0.636"></div></div><div>0.636</div>
-          </div>
-          <div class="bar-row" role="row">
-            <div>MiniMax M3</div><div>Psychometric-only</div><div class="bar-track"><div class="bar-fill minimax" style="--score: 0.632"></div></div><div>0.632</div>
-          </div>
-        </div>
-
-        <p class="note-band">The synthetic character metrics are fun to inspect, but this aggregate table is the more serious model-comparison signal. MiniMax M3 profiles were strong; MiniMax M3 4-part LSIs were behind the established comparison band in this first pass.</p>
-
-        <div class="section-head" style="margin-top: 42px;">
-          <h2>Expanded OpenRouter shootout</h2>
-          <p class="section-kicker">Same 50-person slice, same 4-part LSI protocol, Gemini 3 Flash scoring. MiniMax M3 scoring was smoke-tested but too slow for this first public drop, so the comparable table below uses the stable Gemini scorer.</p>
-        </div>
-
-        <div class="bar-table" role="table" aria-label="Expanded OpenRouter 4-part LSI HEXACO recovery comparison">
-          <div class="bar-row header" role="row">
-            <div>Generator</div>
-            <div>Profile format</div>
-            <div>HEXACO recovery</div>
-            <div>r</div>
-          </div>
-          <div class="bar-row" role="row">
-            <div>GLM 5.1</div><div>Interwoven biography</div><div class="bar-track"><div class="bar-fill" style="--score: 0.751"></div></div><div>0.751</div>
-          </div>
-          <div class="bar-row" role="row">
-            <div>GLM 5.1</div><div>Psychometric-only</div><div class="bar-track"><div class="bar-fill" style="--score: 0.748"></div></div><div>0.748</div>
-          </div>
-          <div class="bar-row" role="row">
-            <div>Qwen 3.7 Max</div><div>Psychometric-only</div><div class="bar-track"><div class="bar-fill" style="--score: 0.716"></div></div><div>0.716</div>
-          </div>
-          <div class="bar-row" role="row">
-            <div>Kimi K2.6</div><div>Psychometric-only</div><div class="bar-track"><div class="bar-fill" style="--score: 0.686"></div></div><div>0.686</div>
-          </div>
-          <div class="bar-row" role="row">
-            <div>Qwen 3.7 Max</div><div>Interwoven biography</div><div class="bar-track"><div class="bar-fill" style="--score: 0.680"></div></div><div>0.680</div>
-          </div>
-          <div class="bar-row" role="row">
-            <div>Kimi K2.6</div><div>Interwoven biography</div><div class="bar-track"><div class="bar-fill" style="--score: 0.676"></div></div><div>0.676</div>
-          </div>
-          <div class="bar-row" role="row">
-            <div>MiniMax M2.7</div><div>Psychometric-only</div><div class="bar-track"><div class="bar-fill minimax" style="--score: 0.676"></div></div><div>0.676</div>
-          </div>
-          <div class="bar-row" role="row">
-            <div>MiniMax M2.7</div><div>Interwoven biography</div><div class="bar-track"><div class="bar-fill minimax" style="--score: 0.645"></div></div><div>0.645</div>
-          </div>
-          <div class="bar-row" role="row">
-            <div>MiniMax M3</div><div>Interwoven biography</div><div class="bar-track"><div class="bar-fill minimax" style="--score: 0.636"></div></div><div>0.636</div>
-          </div>
-          <div class="bar-row" role="row">
-            <div>MiniMax M3</div><div>Psychometric-only</div><div class="bar-track"><div class="bar-fill minimax" style="--score: 0.632"></div></div><div>0.632</div>
-          </div>
-          <div class="bar-row" role="row">
-            <div>MiMo v2.5 Pro</div><div>Psychometric-only</div><div class="bar-track"><div class="bar-fill" style="--score: 0.621"></div></div><div>0.621</div>
-          </div>
-          <div class="bar-row" role="row">
-            <div>MiMo v2.5 Pro</div><div>Interwoven biography</div><div class="bar-track"><div class="bar-fill" style="--score: 0.612"></div></div><div>0.612</div>
-          </div>
-        </div>
-
-        <p class="note-band">MiniMax M2.7 needed OpenRouter's MiniMax-specific reasoning split flag during generation; without it, one synthetic profile call spent the whole budget on hidden reasoning and returned no final prose. Kimi worked cleanly with `reasoning.effort=none` on OpenRouter despite the route being thinking-capable.</p>
-      </div>
-    </section>
-
-    <section id="files">
-      <div class="wrap">
-        <div class="section-head">
-          <h2>Files</h2>
-          <p class="section-kicker">Everything here is public-safe: synthetic fiction or aggregate-only tables.</p>
-        </div>
-
-        <div class="links">
-          <a class="link-card" href="./packets/minimax_m3_public_packet/README.md">
-            <strong>MiniMax packet README</strong>
-            <span>Folder map, quick-read metrics, and guardrails.</span>
-          </a>
-          <a class="link-card" href="./packets/minimax_m3_public_packet/tables/canonical_4part_generator_comparison_with_minimax.tsv">
-            <strong>Canonical comparison table</strong>
-            <span>4-part LSI aggregate rows with MiniMax M3 beside the four-model band.</span>
-          </a>
-          <a class="link-card" href="./packets/minimax_m3_public_packet/tables/minimax_m3_50pid_aggregate_only.tsv">
-            <strong>MiniMax aggregate-only table</strong>
-            <span>Stage, generator, scorer, metric group, r, and MAE summaries only.</span>
-          </a>
-          <a class="link-card" href="./packets/minimax_m3_public_packet/tables/expanded_openrouter_benchmark_digest_20260601.md">
-            <strong>Expanded OpenRouter digest</strong>
-            <span>MiniMax M2.7, GLM 5.1, MiMo, Kimi, Qwen, and MiniMax M3 aggregate rows.</span>
-          </a>
-          <a class="link-card" href="./packets/minimax_m3_public_packet/tables/expanded_generation_behavior_correlations_public_20260601.tsv">
-            <strong>Generation-behaviour correlations</strong>
-            <span>Exploratory public-safe language-behaviour metrics for the 50-person slice.</span>
-          </a>
-          <a class="link-card" href="./comparison_packets/">
-            <strong>Additional synthetic packets</strong>
-            <span>Bud, Isolde, and Megyn reference packets from earlier public demos.</span>
-          </a>
-          <a class="link-card" href="./packets/minimax_m3_public_packet/rival_models_20260601/side_by_side_lsis/roxy_saint_clair__interwoven_bio.md">
-            <strong>Roxy rival LSI side-by-side</strong>
-            <span>MiniMax M2.7, GLM 5.1, MiMo, Kimi, and Qwen on the same synthetic character.</span>
-          </a>
-          <a class="link-card" href="./packets/minimax_m3_public_packet/rival_models_20260601/side_by_side_profiles/roxy_saint_clair__interwoven_bio.md">
-            <strong>Roxy rival profile side-by-side</strong>
-            <span>Read the rival conditioning portraits directly.</span>
-          </a>
-          <a class="link-card" href="./packets/minimax_m3_public_packet/side_by_side_lsis/cillian_frost__interwoven_bio.md">
-            <strong>Cillian side-by-side LSI</strong>
-            <span>Gemma 4 31B, Opus 4.6, and MiniMax M3.</span>
-          </a>
-          <a class="link-card" href="./packets/minimax_m3_public_packet/side_by_side_lsis/haruki_minamoto__interwoven_bio.md">
-            <strong>Haruki side-by-side LSI</strong>
-            <span>Gemma 4 31B, Opus 4.6, and MiniMax M3.</span>
-          </a>
         </div>
       </div>
     </section>
@@ -642,7 +711,7 @@
 
   <footer>
     <div class="wrap">
-      LoveMind AI, public synthetic demo. Built May 31 and updated June 1, 2026. This repo is separate from reviewer-facing COLM rebuttal materials.
+      Public-safe LoveMind AI demo. Aggregate-only participant benchmark rows. Fictional examples only for public reading.
     </div>
   </footer>
 </body>

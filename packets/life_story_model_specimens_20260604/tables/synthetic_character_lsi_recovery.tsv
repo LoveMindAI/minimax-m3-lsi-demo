@@ -1,0 +1,19 @@
+stage	character	object	all_dimensions_r_to_name_fact_target	all_dimensions_mae	hexaco_r_to_name_fact_target	hexaco_mae	beyond_hexaco_r_to_name_fact_target	beyond_hexaco_mae
+lsi	Cillian Frost	opus_4_6_psych_only	0.960	0.436	0.985	0.393	0.815	0.488
+lsi	Cillian Frost	gemma_4_31b_psych_only	0.919	0.518	0.976	0.464	0.835	0.583
+lsi	Cillian Frost	opus_4_6_interwoven_bio	0.871	0.370	0.979	0.314	-0.135	0.437
+lsi	Cillian Frost	gemma_4_31b_interwoven_bio	0.910	0.542	0.960	0.453	0.794	0.648
+lsi	Cillian Frost	minimax_m3_psych_only	0.950	0.353	0.977	0.319	0.798	0.393
+lsi	Cillian Frost	minimax_m3_interwoven_bio	0.944	0.332	0.963	0.347	0.726	0.313
+lsi	Haruki Minamoto	gemma_4_31b_psych_only	0.889	0.524	0.949	0.404	0.937	0.667
+lsi	Haruki Minamoto	opus_4_6_psych_only	0.880	0.422	0.993	0.403	0.716	0.445
+lsi	Haruki Minamoto	gemma_4_31b_interwoven_bio	0.888	0.478	0.838	0.429	0.962	0.537
+lsi	Haruki Minamoto	opus_4_6_interwoven_bio	0.923	0.314	0.898	0.350	0.959	0.272
+lsi	Haruki Minamoto	minimax_m3_psych_only	0.913	0.229	0.948	0.242	0.970	0.213
+lsi	Haruki Minamoto	minimax_m3_interwoven_bio	0.723	0.387	0.886	0.358	0.567	0.422
+lsi	Roxy Saint-Clair	gemma_4_31b_psych_only	0.890	0.711	0.864	0.675	0.933	0.754
+lsi	Roxy Saint-Clair	gemma_4_31b_interwoven_bio	0.904	0.677	0.872	0.646	0.933	0.714
+lsi	Roxy Saint-Clair	opus_4_6_interwoven_bio	0.854	0.402	0.953	0.458	0.934	0.335
+lsi	Roxy Saint-Clair	opus_4_6_psych_only	0.704	0.465	0.957	0.496	0.309	0.428
+lsi	Roxy Saint-Clair	minimax_m3_interwoven_bio	0.928	0.513	0.920	0.567	0.948	0.449
+lsi	Roxy Saint-Clair	minimax_m3_psych_only	0.776	0.468	0.913	0.513	0.821	0.415
