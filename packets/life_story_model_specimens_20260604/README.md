@@ -2,6 +2,12 @@
 
 This packet supports the public GitHub Pages reader in this repo. It is public-safe: no participant-level PARSEL rows, PIDs, raw profiles, biographical facts, conversation text, or generated participant narratives are included.
 
+PARSEL is the multimodal partner-selection dataset introduced by Tiffany Matej Hrkalovic, Bernd Dudzik, Daniel Balliet, and Hayley Hung. Tiffany Matej Hrkalovic is also the anchor author of `Stories of Your Life as Others`, the paper this public demo loosely spins off from.
+
+- LoveMind AI: https://lovemind.ai
+- Stories of Your Life as Others: https://arxiv.org/abs/2604.06071
+- PARSEL paper: https://research.vu.nl/ws/portalfiles/portal/463222040/PARSEL_A_Multimodal_Dataset_for_Modeling_Decision-Making_Processes_Involved_in_Selecting_Partners_for_Joint_Tasks.pdf
+
 ## Tables
 
 - `tables/full_n290_profile_and_lsi_digest.tsv`: full 290-person aggregate digest for Gemma 4 31B and Gemma 4 12B where complete runs exist.

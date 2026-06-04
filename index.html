@@ -60,7 +60,9 @@
     }
 
     .brand {
+      color: var(--ink);
       font-weight: 820;
+      text-decoration: none;
     }
 
     .navlinks {
@@ -430,7 +432,7 @@
   <header>
     <div class="wrap">
       <nav class="topnav" aria-label="Primary">
-        <div class="brand">LoveMind AI</div>
+        <a class="brand" href="https://lovemind.ai">LoveMind AI</a>
         <div class="navlinks">
           <a href="#bench-290">Full N=290</a>
           <a href="#bench-50">50-PID slice</a>
@@ -494,13 +496,14 @@
       <div class="wrap">
         <div class="section-head">
           <h2>What this is.</h2>
-          <p>PARSEL powers the real benchmark, but this public repo only exposes aggregate numbers and fictional examples.</p>
+          <p>PARSEL is the dataset spine behind the real benchmark. This public repo gives aggregate numbers and fictional examples for model readers.</p>
         </div>
 
         <div class="explain-grid">
           <div class="plain-block">
-            <h3>PARSEL, without leakage</h3>
-            <p>PARSEL is a research-only dataset with 290 participants, psychometric profiles, basic biographical facts, and short conversation materials. It lets us test whether generated life-story text preserves measurable individual differences.</p>
+            <h3>The PARSEL source</h3>
+            <p><a href="https://research.vu.nl/ws/portalfiles/portal/463222040/PARSEL_A_Multimodal_Dataset_for_Modeling_Decision-Making_Processes_Involved_in_Selecting_Partners_for_Joint_Tasks.pdf">PARSEL</a> is a multimodal partner-selection dataset introduced by Tiffany Matej Hrkalovic, Bernd Dudzik, Daniel Balliet, and Hayley Hung. Tiffany Matej Hrkalovic is also the anchor author of <a href="https://arxiv.org/abs/2604.06071">Stories of Your Life as Others</a>, the paper this public demo loosely spins off from.</p>
+            <p>For these runs, we use the research-only PARSEL materials that support psychometric recovery checks: 290 participants, psychometric profiles, basic biographical facts, and short conversation materials. PARSEL lets us test whether generated life-story text preserves measurable individual differences.</p>
             <p>This repo does not include participant rows, PIDs, raw profiles, real biographical facts, conversation text, or participant-linked generated narratives. Public readers get aggregate correlations and fictional synthetic characters only.</p>
           </div>
 
@@ -673,8 +676,16 @@
         </div>
         <div class="source-grid">
           <div class="source-card">
+            <strong>LoveMind AI</strong>
+            <a href="https://lovemind.ai">lovemind.ai</a>
+          </div>
+          <div class="source-card">
             <strong>Stories paper</strong>
             <a href="https://arxiv.org/abs/2604.06071">arXiv 2604.06071</a>
+          </div>
+          <div class="source-card">
+            <strong>PARSEL paper</strong>
+            <a href="https://research.vu.nl/ws/portalfiles/portal/463222040/PARSEL_A_Multimodal_Dataset_for_Modeling_Decision-Making_Processes_Involved_in_Selecting_Partners_for_Joint_Tasks.pdf">Hrkalovic et al. 2025</a>
           </div>
           <div class="source-card">
             <strong>Gemma 4 family</strong>

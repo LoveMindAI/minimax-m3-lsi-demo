@@ -4,9 +4,13 @@ Public-safe model specimens from the LoveMind Life Story Interview pipeline, cen
 
 This repo began as a MiniMax M3 public demo. It is now a broader reader and aggregate benchmark packet for newly released models tested on a loose public spin-off of our paper, [Stories of Your Life as Others](https://arxiv.org/abs/2604.06071).
 
+The real benchmark draws on PARSEL, the multimodal partner-selection dataset introduced by Tiffany Matej Hrkalovic, Bernd Dudzik, Daniel Balliet, and Hayley Hung. Tiffany Matej Hrkalovic is also the anchor author of Stories of Your Life as Others.
+
 ## Start Here
 
+- [LoveMind AI](https://lovemind.ai)
 - [Landing page](./index.html)
+- [PARSEL paper](https://research.vu.nl/ws/portalfiles/portal/463222040/PARSEL_A_Multimodal_Dataset_for_Modeling_Decision-Making_Processes_Involved_in_Selecting_Partners_for_Joint_Tasks.pdf)
 - [New public packet](./packets/life_story_model_specimens_20260604/README.md)
 - [Full N=290 aggregate table](./packets/life_story_model_specimens_20260604/tables/full_n290_profile_and_lsi_digest.tsv)
 - [50-PID OpenRouter exploratory table](./packets/life_story_model_specimens_20260604/tables/openrouter_50pid_interwoven_digest.tsv)
