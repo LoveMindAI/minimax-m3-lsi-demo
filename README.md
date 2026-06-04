@@ -1,6 +1,6 @@
 # Trait-to-Life-Story Benchmark
 
-Model specimens from the LoveMind Life Story Interview pipeline, centered on Gemma 4 31B, Gemma 4 12B, and MiniMax M3.
+Model specimens from the LoveMind Life Story Interview pipeline, centered on Gemma 4 31B, Gemma 4 12B, Gemini 3 Flash, Qwen 3.6 27B, and MiniMax M3.
 
 This repo began as a MiniMax M3 public demo. It is now a broader reader and aggregate benchmark packet for newly released models tested on a loose public spin-off of our paper, [Stories of Your Life as Others](https://arxiv.org/abs/2604.06071).
 
@@ -18,7 +18,7 @@ The real benchmark draws on PARSEL, the multimodal partner-selection dataset int
 ## What Is Included
 
 - Aggregate-only recovery tables for profile generation and 4-part interwoven Life Story Interviews.
-- Full 290-person aggregate rows where complete runs exist, including Gemma 4 31B and Gemma 4 12B.
+- Full 290-person aggregate rows where complete runs exist, including Gemma 4 31B, Gemma 4 12B, Gemini 3 Flash, and Qwen 3.6 27B.
 - A separate 50-PID exploratory comparison slice for MiniMax M3 and nearby OpenRouter rivals.
 - Fictional synthetic character examples for Roxy Saint-Clair, Cillian Frost, and Haruki Minamoto.
 - Gemma 4 12B synthetic character profiles and LSIs copied into the new packet.
