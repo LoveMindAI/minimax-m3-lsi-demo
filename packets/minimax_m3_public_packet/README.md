@@ -2,7 +2,7 @@
 
 Built: 2026-05-31. Expanded: 2026-06-01.
 
-This is a public-safe toy packet for MiniMax M3 and several rival models. It uses three fictional, name-first characters from the earlier LocalLLaMA-facing demo: Cillian Frost, Haruki Minamoto, and Roxy Saint-Clair. No real PARSEL participant profiles, PIDs, rows, or narratives are included.
+This is a toy packet for MiniMax M3 and several rival models. It uses three fictional, name-first characters from the earlier LocalLLaMA-facing demo: Cillian Frost, Haruki Minamoto, and Roxy Saint-Clair. No real PARSEL participant profiles, PIDs, rows, or narratives are included.
 
 The fictional characters were created for public inspection. We started with names, used Opus and Gemini to generate toy facts, reverse-coded the resulting name-and-fact skeletons with multiple model raters into dense toy psychometric targets, then asked each generator to transform those targets into conditioning portraits and 24-section Life Story Interviews. The actual research benchmark uses research-only real participant profiles and life facts, so those source materials stay private.
 
@@ -39,8 +39,8 @@ In the expanded OpenRouter 50-person benchmark, GLM 5.1 was the strongest added 
 - `tables/rival_synthetic_character_lsi_recovery_20260601.tsv`: public synthetic LSI recovery for the rival set.
 - `tables/expanded_openrouter_benchmark_digest_20260601.md`: human-readable aggregate digest for the expanded 50-person OpenRouter benchmark.
 - `tables/expanded_openrouter_benchmark_summary_20260601.tsv`: aggregate-only rows for the expanded 50-person OpenRouter benchmark.
-- `tables/expanded_generation_behavior_correlations_public_20260601.tsv`: exploratory public-safe generation-behaviour correlations.
-- `tables/canonical_4part_generator_comparison_with_minimax.tsv`: aggregate 4-part generator comparison, public-safe.
+- `tables/expanded_generation_behavior_correlations_public_20260601.tsv`: exploratory generation-behaviour correlations.
+- `tables/canonical_4part_generator_comparison_with_minimax.tsv`: aggregate 4-part generator comparison.
 - `tables/minimax_m3_50pid_aggregate_only.tsv`: aggregate MiniMax M3 benchmark rows only.
 
 ## Guardrails

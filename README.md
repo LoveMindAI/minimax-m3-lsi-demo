@@ -1,6 +1,6 @@
-# Life Story Model Specimens
+# Trait-to-Life-Story Benchmark
 
-Public-safe model specimens from the LoveMind Life Story Interview pipeline, centered on Gemma 4 31B, Gemma 4 12B, and MiniMax M3.
+Model specimens from the LoveMind Life Story Interview pipeline, centered on Gemma 4 31B, Gemma 4 12B, and MiniMax M3.
 
 This repo began as a MiniMax M3 public demo. It is now a broader reader and aggregate benchmark packet for newly released models tested on a loose public spin-off of our paper, [Stories of Your Life as Others](https://arxiv.org/abs/2604.06071).
 
@@ -14,14 +14,13 @@ The real benchmark draws on PARSEL, the multimodal partner-selection dataset int
 - [New public packet](./packets/life_story_model_specimens_20260604/README.md)
 - [Full N=290 aggregate table](./packets/life_story_model_specimens_20260604/tables/full_n290_profile_and_lsi_digest.tsv)
 - [50-PID OpenRouter exploratory table](./packets/life_story_model_specimens_20260604/tables/openrouter_50pid_interwoven_digest.tsv)
-- [Earlier MiniMax M3 packet](./packets/minimax_m3_public_packet/README.md)
 
 ## What Is Included
 
 - Aggregate-only recovery tables for profile generation and 4-part interwoven Life Story Interviews.
 - Full 290-person aggregate rows where complete runs exist, including Gemma 4 31B and Gemma 4 12B.
 - A separate 50-PID exploratory comparison slice for MiniMax M3 and nearby OpenRouter rivals.
-- Public synthetic character examples for Roxy Saint-Clair, Cillian Frost, and Haruki Minamoto.
+- Fictional synthetic character examples for Roxy Saint-Clair, Cillian Frost, and Haruki Minamoto.
 - Gemma 4 12B synthetic character profiles and LSIs copied into the new packet.
 - Earlier Gemma 4 31B, Opus 4.6, MiniMax M3, and rival synthetic examples retained for side-by-side reading.
 
@@ -29,7 +28,7 @@ The real benchmark draws on PARSEL, the multimodal partner-selection dataset int
 
 PARSEL is a research-only dataset containing real participants' psychometric profiles, basic biographical facts, and short conversational materials. Those participant-level materials are not public.
 
-This repo does not include participant rows, PIDs, raw psychometric profiles, private biographical facts, real conversation text, or generated narratives tied to real participants. The benchmark tables are aggregate-only. The readable examples use fictional public-safe characters.
+This repo does not include participant rows, PIDs, raw psychometric profiles, private biographical facts, real conversation text, or generated narratives tied to real participants. The benchmark tables are aggregate-only. The readable examples use fictional characters.
 
 ## How The Synthetic Characters Were Made
 

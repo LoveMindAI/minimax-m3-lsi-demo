@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Life Story Model Specimens | LoveMind</title>
-  <meta name="description" content="A public-safe Life Story Interview benchmark reader for Gemma 4 31B, Gemma 4 12B, MiniMax M3, and nearby model specimens.">
+  <title>Trait-to-Life-Story Benchmark | LoveMind</title>
+  <meta name="description" content="A Life Story Interview benchmark reader for Gemma 4 31B, Gemma 4 12B, MiniMax M3, and nearby model specimens.">
   <style>
     :root {
       --ink: #17201a;
@@ -435,15 +435,15 @@
         <a class="brand" href="https://lovemind.ai">LoveMind AI</a>
         <div class="navlinks">
           <a href="#bench-290">Full N=290</a>
-          <a href="#bench-50">50-PID slice</a>
+          <a href="#bench-50">Ranked 50-PID</a>
           <a href="#examples">Examples</a>
           <a href="./packets/life_story_model_specimens_20260604/README.md">Packet</a>
         </div>
       </nav>
 
       <div class="hero">
-        <span class="eyebrow">Public-safe LSI model specimens</span>
-        <h1>Life story specimens for new models.</h1>
+        <span class="eyebrow">Narrative identity trait task</span>
+        <h1>Can models turn traits into life stories?</h1>
         <p class="lede">
           A loose public spin-off of <a href="https://arxiv.org/abs/2604.06071">Stories of Your Life as Others</a>:
           we ask models to transform dense psychometric targets into profiles and short Life Story Interviews,
@@ -486,7 +486,7 @@
             </div>
           </article>
         </div>
-        <p class="note">Headline values above are HEXACO6 mean r under Gemini 3 Flash scoring, using interwoven biography profiles. Gemma rows are full N=290; MiniMax M3 is the public-safe 50-PID slice.</p>
+        <p class="note">Headline values above are HEXACO6 mean r under Gemini 3 Flash scoring, using interwoven biography profiles. Gemma rows are full N=290; MiniMax M3 is the 50-PID slice.</p>
       </div>
     </div>
   </header>
@@ -496,7 +496,7 @@
       <div class="wrap">
         <div class="section-head">
           <h2>What this is.</h2>
-          <p>PARSEL is the dataset spine behind the real benchmark. This public repo gives aggregate numbers and fictional examples for model readers.</p>
+          <p>PARSEL is the dataset spine behind the real benchmark. This repo gives aggregate numbers and fictional examples for model readers.</p>
         </div>
 
         <div class="explain-grid">
@@ -568,14 +568,15 @@
     <section id="bench-50">
       <div class="wrap">
         <div class="section-head">
-          <h2>50-PID slice.</h2>
-          <p>MiniMax M3 and nearby OpenRouter rivals on the public-safe 50-person exploratory slice. Same scorer, same interwoven-biography condition.</p>
+          <h2>Ranked 50-PID slice.</h2>
+          <p>MiniMax M3 and nearby OpenRouter rivals on the 50-person exploratory slice. Rows are ranked within each stage by Continuous16 under the same scorer and interwoven-biography condition.</p>
         </div>
 
         <div class="table-wrap">
           <table>
             <thead>
               <tr>
+                <th>Rank</th>
                 <th>Model</th>
                 <th>Stage</th>
                 <th>N</th>
@@ -586,18 +587,18 @@
               </tr>
             </thead>
             <tbody>
-              <tr><td>MiniMax M3</td><td>Profile</td><td class="numcell">50</td><td class="numcell">0.884</td><td class="numcell">0.710</td><td class="numcell">0.782</td><td class="numcell">0.890</td></tr>
-              <tr><td>MiniMax M2.7</td><td>Profile</td><td class="numcell">50</td><td class="numcell">0.899</td><td class="numcell">0.722</td><td class="numcell">0.782</td><td class="numcell">0.673</td></tr>
-              <tr><td>GLM 5.1</td><td>Profile</td><td class="numcell">50</td><td class="numcell">0.911</td><td class="numcell">0.712</td><td class="numcell">0.793</td><td class="numcell">0.905</td></tr>
-              <tr><td>Kimi K2.6</td><td>Profile</td><td class="numcell">50</td><td class="numcell">0.906</td><td class="numcell">0.696</td><td class="numcell">0.781</td><td class="numcell">0.878</td></tr>
-              <tr><td>MiMo v2.5 Pro</td><td>Profile</td><td class="numcell">50</td><td class="numcell">0.892</td><td class="numcell">0.692</td><td class="numcell">0.774</td><td class="numcell">0.878</td></tr>
-              <tr><td>Qwen 3.7 Max</td><td>Profile</td><td class="numcell">50</td><td class="numcell">0.900</td><td class="numcell">0.749</td><td class="numcell">0.811</td><td class="numcell">0.907</td></tr>
-              <tr><td>MiniMax M3</td><td>4-part LSI</td><td class="numcell">50</td><td class="numcell">0.636</td><td class="numcell">0.444</td><td class="numcell">0.508</td><td class="numcell">0.373</td></tr>
-              <tr><td>MiniMax M2.7</td><td>4-part LSI</td><td class="numcell">50</td><td class="numcell">0.645</td><td class="numcell">0.544</td><td class="numcell">0.555</td><td class="numcell">0.132</td></tr>
-              <tr><td>GLM 5.1</td><td>4-part LSI</td><td class="numcell">50</td><td class="numcell">0.751</td><td class="numcell">0.610</td><td class="numcell">0.657</td><td class="numcell">0.569</td></tr>
-              <tr><td>Kimi K2.6</td><td>4-part LSI</td><td class="numcell">50</td><td class="numcell">0.676</td><td class="numcell">0.526</td><td class="numcell">0.574</td><td class="numcell">0.449</td></tr>
-              <tr><td>MiMo v2.5 Pro</td><td>4-part LSI</td><td class="numcell">50</td><td class="numcell">0.612</td><td class="numcell">0.500</td><td class="numcell">0.534</td><td class="numcell">0.415</td></tr>
-              <tr><td>Qwen 3.7 Max</td><td>4-part LSI</td><td class="numcell">50</td><td class="numcell">0.680</td><td class="numcell">0.570</td><td class="numcell">0.605</td><td class="numcell">0.513</td></tr>
+              <tr><td class="numcell">1</td><td>Qwen 3.7 Max</td><td>Profile</td><td class="numcell">50</td><td class="numcell">0.900</td><td class="numcell">0.749</td><td class="numcell">0.811</td><td class="numcell">0.907</td></tr>
+              <tr><td class="numcell">2</td><td>GLM 5.1</td><td>Profile</td><td class="numcell">50</td><td class="numcell">0.911</td><td class="numcell">0.712</td><td class="numcell">0.793</td><td class="numcell">0.905</td></tr>
+              <tr><td class="numcell">3</td><td>MiniMax M2.7</td><td>Profile</td><td class="numcell">50</td><td class="numcell">0.899</td><td class="numcell">0.722</td><td class="numcell">0.782</td><td class="numcell">0.673</td></tr>
+              <tr><td class="numcell">4</td><td>MiniMax M3</td><td>Profile</td><td class="numcell">50</td><td class="numcell">0.884</td><td class="numcell">0.710</td><td class="numcell">0.782</td><td class="numcell">0.890</td></tr>
+              <tr><td class="numcell">5</td><td>Kimi K2.6</td><td>Profile</td><td class="numcell">50</td><td class="numcell">0.906</td><td class="numcell">0.696</td><td class="numcell">0.781</td><td class="numcell">0.878</td></tr>
+              <tr><td class="numcell">6</td><td>MiMo v2.5 Pro</td><td>Profile</td><td class="numcell">50</td><td class="numcell">0.892</td><td class="numcell">0.692</td><td class="numcell">0.774</td><td class="numcell">0.878</td></tr>
+              <tr><td class="numcell">1</td><td>GLM 5.1</td><td>4-part LSI</td><td class="numcell">50</td><td class="numcell">0.751</td><td class="numcell">0.610</td><td class="numcell">0.657</td><td class="numcell">0.569</td></tr>
+              <tr><td class="numcell">2</td><td>Qwen 3.7 Max</td><td>4-part LSI</td><td class="numcell">50</td><td class="numcell">0.680</td><td class="numcell">0.570</td><td class="numcell">0.605</td><td class="numcell">0.513</td></tr>
+              <tr><td class="numcell">3</td><td>Kimi K2.6</td><td>4-part LSI</td><td class="numcell">50</td><td class="numcell">0.676</td><td class="numcell">0.526</td><td class="numcell">0.574</td><td class="numcell">0.449</td></tr>
+              <tr><td class="numcell">4</td><td>MiniMax M2.7</td><td>4-part LSI</td><td class="numcell">50</td><td class="numcell">0.645</td><td class="numcell">0.544</td><td class="numcell">0.555</td><td class="numcell">0.132</td></tr>
+              <tr><td class="numcell">5</td><td>MiMo v2.5 Pro</td><td>4-part LSI</td><td class="numcell">50</td><td class="numcell">0.612</td><td class="numcell">0.500</td><td class="numcell">0.534</td><td class="numcell">0.415</td></tr>
+              <tr><td class="numcell">6</td><td>MiniMax M3</td><td>4-part LSI</td><td class="numcell">50</td><td class="numcell">0.636</td><td class="numcell">0.444</td><td class="numcell">0.508</td><td class="numcell">0.373</td></tr>
             </tbody>
           </table>
         </div>
@@ -617,9 +618,9 @@
             <h3>Roxy Saint-Clair</h3>
             <ul>
               <li><a href="./packets/minimax_m3_public_packet/original_reference_profiles/roxy_saint_clair__gemma_4_31b_interwoven_bio.md">Gemma 4 31B profile</a></li>
-              <li><a href="./packets/life_story_model_specimens_20260604/synthetic_characters/gemma4_12b_public_safe/profiles/roxy_saint_clair__gemma_4_12b_interwoven_bio.md">Gemma 4 12B profile</a></li>
+              <li><a href="./packets/life_story_model_specimens_20260604/synthetic_characters/gemma4_12b_examples/profiles/roxy_saint_clair__gemma_4_12b_interwoven_bio.md">Gemma 4 12B profile</a></li>
               <li><a href="./packets/minimax_m3_public_packet/minimax_profiles/roxy_saint_clair__minimax_m3_interwoven_bio.md">MiniMax M3 profile</a></li>
-              <li><a href="./packets/life_story_model_specimens_20260604/synthetic_characters/gemma4_12b_public_safe/side_by_side_lsis/roxy_saint_clair__interwoven_bio.md">Gemma 4 12B profile and LSI side-by-side</a></li>
+              <li><a href="./packets/life_story_model_specimens_20260604/synthetic_characters/gemma4_12b_examples/side_by_side_lsis/roxy_saint_clair__interwoven_bio.md">Gemma 4 12B profile and LSI side-by-side</a></li>
             </ul>
           </div>
 
@@ -627,7 +628,7 @@
             <h3>Cillian Frost</h3>
             <ul>
               <li><a href="./packets/minimax_m3_public_packet/original_reference_profiles/cillian_frost__gemma_4_31b_interwoven_bio.md">Gemma 4 31B profile</a></li>
-              <li><a href="./packets/life_story_model_specimens_20260604/synthetic_characters/gemma4_12b_public_safe/profiles/cillian_frost__gemma_4_12b_interwoven_bio.md">Gemma 4 12B profile</a></li>
+              <li><a href="./packets/life_story_model_specimens_20260604/synthetic_characters/gemma4_12b_examples/profiles/cillian_frost__gemma_4_12b_interwoven_bio.md">Gemma 4 12B profile</a></li>
               <li><a href="./packets/minimax_m3_public_packet/minimax_profiles/cillian_frost__minimax_m3_interwoven_bio.md">MiniMax M3 profile</a></li>
               <li><a href="./packets/minimax_m3_public_packet/rival_models_20260601/side_by_side_lsis/cillian_frost__interwoven_bio.md">Rival-model LSI side-by-side</a></li>
             </ul>
@@ -637,7 +638,7 @@
             <h3>Haruki Minamoto</h3>
             <ul>
               <li><a href="./packets/minimax_m3_public_packet/original_reference_profiles/haruki_minamoto__gemma_4_31b_interwoven_bio.md">Gemma 4 31B profile</a></li>
-              <li><a href="./packets/life_story_model_specimens_20260604/synthetic_characters/gemma4_12b_public_safe/profiles/haruki_minamoto__gemma_4_12b_interwoven_bio.md">Gemma 4 12B profile</a></li>
+              <li><a href="./packets/life_story_model_specimens_20260604/synthetic_characters/gemma4_12b_examples/profiles/haruki_minamoto__gemma_4_12b_interwoven_bio.md">Gemma 4 12B profile</a></li>
               <li><a href="./packets/minimax_m3_public_packet/minimax_profiles/haruki_minamoto__minimax_m3_interwoven_bio.md">MiniMax M3 profile</a></li>
               <li><a href="./packets/minimax_m3_public_packet/side_by_side_lsis/haruki_minamoto__interwoven_bio.md">MiniMax M3 profile and LSI side-by-side</a></li>
             </ul>
@@ -672,7 +673,7 @@
       <div class="wrap">
         <div class="section-head">
           <h2>Sources and files.</h2>
-          <p>External model context plus the public-safe packets used by this page.</p>
+          <p>External model context plus the packets used by this page.</p>
         </div>
         <div class="source-grid">
           <div class="source-card">
@@ -711,10 +712,6 @@
             <strong>New packet</strong>
             <a href="./packets/life_story_model_specimens_20260604/README.md">Packet README</a>
           </div>
-          <div class="source-card">
-            <strong>Older M3 packet</strong>
-            <a href="./packets/minimax_m3_public_packet/README.md">MiniMax packet README</a>
-          </div>
         </div>
       </div>
     </section>
@@ -722,7 +719,7 @@
 
   <footer>
     <div class="wrap">
-      Public-safe LoveMind AI demo. Aggregate-only participant benchmark rows. Fictional examples only for public reading.
+      LoveMind AI
     </div>
   </footer>
 </body>

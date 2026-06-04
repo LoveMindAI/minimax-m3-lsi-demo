@@ -1,6 +1,6 @@
-# Life Story Model Specimens public packet - 2026-06-04
+# Trait-to-Life-Story Benchmark packet - 2026-06-04
 
-This packet supports the public GitHub Pages reader in this repo. It is public-safe: no participant-level PARSEL rows, PIDs, raw profiles, biographical facts, conversation text, or generated participant narratives are included.
+This packet supports the GitHub Pages reader in this repo. No participant-level PARSEL rows, PIDs, raw profiles, biographical facts, conversation text, or generated participant narratives are included.
 
 PARSEL is the multimodal partner-selection dataset introduced by Tiffany Matej Hrkalovic, Bernd Dudzik, Daniel Balliet, and Hayley Hung. Tiffany Matej Hrkalovic is also the anchor author of `Stories of Your Life as Others`, the paper this public demo loosely spins off from.
 
@@ -11,14 +11,14 @@ PARSEL is the multimodal partner-selection dataset introduced by Tiffany Matej H
 ## Tables
 
 - `tables/full_n290_profile_and_lsi_digest.tsv`: full 290-person aggregate digest for Gemma 4 31B and Gemma 4 12B where complete runs exist.
-- `tables/openrouter_50pid_interwoven_digest.tsv`: public-safe 50-PID exploratory slice for MiniMax M3 and nearby OpenRouter rivals, using Gemini 3 Flash as scorer.
-- Synthetic character recovery tables copied from the earlier MiniMax M3 packet and the Gemma 4 12B public-safe sandbox.
+- `tables/openrouter_50pid_interwoven_digest.tsv`: 50-PID exploratory slice for MiniMax M3 and nearby OpenRouter rivals, using Gemini 3 Flash as scorer.
+- Synthetic character recovery tables copied from the earlier MiniMax M3 packet and the Gemma 4 12B sandbox.
 
 ## Synthetic Characters
 
 The fictional examples use names and invented facts only. They are included so readers can inspect prose without exposing research participants.
 
-Gemma 4 12B public-safe synthetic artifacts are under `synthetic_characters/gemma4_12b_public_safe/`. The older MiniMax M3, Gemma 4 31B, Opus 4.6, and rival-model artifacts remain in `../minimax_m3_public_packet/`.
+Gemma 4 12B synthetic artifacts are under `synthetic_characters/gemma4_12b_examples/`. The MiniMax M3, Gemma 4 31B, Opus 4.6, and rival-model artifacts remain in `../minimax_m3_public_packet/`.
 
 ## Metric Denominators
 
