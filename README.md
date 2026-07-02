@@ -1,8 +1,8 @@
-# Trait-to-Life-Story Benchmark
+# Gemma4 Life Story Interview Benchmark
 
 Model specimens from the LoveMind Life Story Interview pipeline, centered on Gemma 4 31B, Gemma 4 12B, Qwen 3.6 27B, and MiniMax M3.
 
-This repo began as a MiniMax M3 public demo. It is now a broader reader and aggregate benchmark packet for newly released models tested on a loose public spin-off of our paper, [Stories of Your Life as Others](https://arxiv.org/abs/2604.06071).
+This repo began as a MiniMax M3 public demo, but the public wrapper is now the broader Gemma4 / LSI model reader. MiniMax rows remain in the historical comparison tables; the project name now reflects the actual center of gravity: transforming psychometric profiles into Life Story Interview narratives and scoring them back into traits.
 
 The real benchmark draws on PARSEL, the multimodal partner-selection dataset introduced by Tiffany Matej Hrkalovic, Bernd Dudzik, Daniel Balliet, and Hayley Hung. Tiffany Matej Hrkalovic is also the anchor author of Stories of Your Life as Others.
 
